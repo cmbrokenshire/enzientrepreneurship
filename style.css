@@ -77,9 +77,6 @@ nav ul li a:hover {
     margin-left: calc(-50vw + 50%); /* Center align the background */
     z-index: 1; /* Ensure it's below the fixed header */
 }
-
-
-/* Overlay Text */
 .overlay {
     position: absolute;
     top: 50%;
@@ -100,21 +97,6 @@ main {
     padding-top: 100vh; /* Add padding to push the content down, equal to the header's height */
 }
 
- .company {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 16px;
-    background: url('background_test_2.jpeg') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    width: 100vw; /* Viewport width */
-    height: 100vh; /* Full viewport height */
-    margin-left: calc(-50vw + 50%); /* Center align the background */
-    z-index: 1;
-
-
-
-}
 /* Styling the Discover Enzi Section */
 #discover {
     background-color: white; /* Light gray background */
@@ -147,6 +129,28 @@ main {
     max-width: 1000px; /* Maximum width of the paragraph */
 }
 
+#discover .video-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px; /* Added space below the button */
+}
+
+#discover .watch-story-btn {
+    display: inline-block;
+    background-color: transparent; /* Keeps the background transparent */
+    color: #004687; /* Navy blue text color */
+    border: 2px solid #004687; /* Navy blue border */
+    padding: 15px 30px; /* Increased padding for a larger button */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    font-size: 20px; /* Increased font size */
+}
+
+#discover .watch-story-btn:hover {
+    background-color: #004687;
+    color: white; /* White text color on hover */
+    text-decoration: underline; /* Underline text on hover */
+}
 
 /* Styling the buttons */
 #discover button {
