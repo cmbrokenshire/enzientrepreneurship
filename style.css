@@ -550,7 +550,7 @@ footer nav ul li a:hover {
 /* ... Existing CSS ... */
 
 /* Responsive Styles */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1400px) {
     body {
         font-size: 18px; /* Smaller font size for mobile */
     }
