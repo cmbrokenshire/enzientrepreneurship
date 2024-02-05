@@ -543,3 +543,59 @@ footer nav ul li a:hover {
 
 
 
+
+
+
+
+/* ... Existing CSS ... */
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    header {
+        padding: 0.5em 1em; /* Smaller padding for header */
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .logo {
+        height: 60px; /* Smaller logo for mobile */
+    }
+
+    nav ul {
+        margin-top: 10px; /* Additional margin for the stacked nav */
+        flex-direction: column; /* Stack the menu items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adjust margin for stacked items */
+    }
+
+    nav ul li a {
+        padding: 5px 20px; /* Larger padding for easier tapping */
+    }
+
+    .main-header {
+        height: 60vh; /* Adjust header height for mobile */
+        background-attachment: scroll; /* Change background attachment for better performance */
+    }
+
+    .overlay {
+        font-size: 24px; /* Smaller font size for the overlay text */
+        padding: 10px; /* Adjust padding */
+        position: static; /* Reset position */
+        transform: none; /* Reset transform */
+    }
+
+    /* Adjust main content padding */
+    main {
+        margin-top: -60vh; /* Adjust to match the new header size */
+        padding-top: 60vh; /* Adjust to match the new header size */
+    }
+    
+    /* Additional responsive adjustments can be added here */
+}
