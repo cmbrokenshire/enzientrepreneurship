@@ -552,7 +552,7 @@ footer nav ul li a:hover {
 /* Responsive Styles */
 @media only screen and (max-width: 1400px) {
     body {
-        font-size: 18px; /* Smaller font size for mobile */
+        font-size: 16px; /* Smaller font size for mobile */
     }
 
     header {
@@ -562,7 +562,7 @@ footer nav ul li a:hover {
     }
 
     .logo {
-        height: 60px; /* Smaller logo for mobile */
+        height: 30px; /* Smaller logo for mobile */
     }
 
     nav ul {
@@ -585,8 +585,8 @@ footer nav ul li a:hover {
     }
 
     .overlay {
-        font-size: 24px; /* Smaller font size for the overlay text */
-        padding: 10px; /* Adjust padding */
+        font-size: 16px; /* Smaller font size for the overlay text */
+        padding-top: 300px; /* Adjust padding */
         position: static; /* Reset position */
         transform: none; /* Reset transform */
     }
