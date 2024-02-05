@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities</title>
+    <link rel="stylesheet" href="opp-style.css">
+</head>
+<body>
+    <header>
+        <img src="Enzi-logo-400px.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="http://chrisbrokenshire.com/enzientrepreneurship.github.io/" target="_blank">Home</a></li>
+                <li><a href="https://enzimotors.com/" target="_blank">Enzimotors</a></li>
+                <li><a href="https://example.com/opportunities" target="_blank">Opportunities</a></li>
+                <li><a href="https://enzimotors.com/about-us/" target="_blank">About Us</a></li>
+                <li><a href="https://enzimotors.com/faqs/" target="_blank">FAQs</a></li>
+                <li><a href="https://enzimotors.com/contact-us/" target="_blank">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <header class="main-header">
+            <div class="overlay">
+                <h1>Student Program and Internships</h1>
+            </div>           
+        </header>
+
+        <section id="programs">
+            <div class="opportunity-grid">
+                <div class="opportunity-box">
+                    <h2>All Programs</h2>
+                    <!-- Content -->
+                </div>
+                <div class="opportunity-box">
+                    <h2>Internships</h2>
+                    <!-- Content -->
+                </div>
+                <div class="opportunity-box">
+                    <h2>Apprenticeships</h2>
+                    <!-- Content -->
+                </div>
+            </div>
+            <div class="line-container">
+                <div class="active-line"></div>
+            </div>
+        </section>
+
+        <section class="category-content" id="category1">
+            <div class="content-box">
+                <h3>Data Mining</h3>
+                <p>Short description here...</p>
+                <a href="link-to-more-info.html">Learn More</a>
+            </div>
+            <div class="content-box">
+                <h3>Backend Developer</h3>
+                <p>Short description here...</p>
+                <a href="link-to-more-info.html">Learn More</a>
+            </div>
+            <div class="content-box">
+                <h3>Web Design</h3>
+                <p>Short description here...</p>
+                <a href="link-to-more-info.html">Learn More</a>
+            </div>
+            <div class="content-box">
+                <h3>Marketing</h3>
+                <p>Short description here...</p>
+                <a href="link-to-more-info.html">Learn More</a>
+            </div>
+            <div class="content-box">
+                <h3>Alexander Apprenticeships</h3>
+                <p>Short description here...</p>
+                <a href="link-to-more-info.html">Learn More</a>
+            </div>
+        </section>
+    
+        <!-- Category content for "Internships" -->
+        <section class="category-content" id="category2" style="display: none;">
+            <div class="content-box">
+                <h3>Data Mining</h3>
+                <p>Short description here...</p>
+                <a href="link-to-more-info.html">Learn More</a>
+            </div>
+            <div class="content-box">
+                <h3>Backend Developer</h3>
+                <p>Short description here...</p>
+                <a href="link-to-more-info.html">Learn More</a>
+            </div>
+            <div class="content-box">
+                <h3>Web Design</h3>
+                <p>Short description here...</p>
+                <a href="link-to-more-info.html">Learn More</a>
+            </div>
+            <div class="content-box">
+                <h3>Marketing</h3>
+                <p>Short description here...</p>
+                <a href="link-to-more-info.html">Learn More</a>
+            </div>
+        </section>
+    
+        <!-- Category content for "Apprenticeships" -->
+        <section class="category-content" id="category3" style="display: none;">
+            <div class="content-box">
+                <h3>Alexander Apprenticeships</h3>
+                <p>Short description here...</p>
+                <a href="link-to-more-info.html">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var boxes = document.querySelectorAll('.opportunity-box');
+            var activeLine = document.querySelector('.active-line');
+        
+            boxes.forEach(function(box, index) {
+                box.addEventListener('click', function() {
+                    // Remove active class from all boxes
+                    boxes.forEach(b => b.classList.remove('active'));
+        
+                    // Add active class to the clicked box
+                    box.classList.add('active');
+        
+                    // Move the active line under the clicked box
+                    activeLine.style.transform = 'translateX(' + (index * 100) + '%)';
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var boxes = document.querySelectorAll('.opportunity-box');
+        
+            boxes.forEach(function(box) {
+                box.addEventListener('click', function() {
+                    // Remove active class from all boxes
+                    boxes.forEach(b => b.classList.remove('active'));
+        
+                    // Add active class to the clicked box
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var opportunityBoxes = document.querySelectorAll('.opportunity-box');
+            var contentSections = document.querySelectorAll('.category-content');
+        
+            opportunityBoxes.forEach(function(box, index) {
+                box.addEventListener('click', function() {
+                    // Hide all category content sections
+                    contentSections.forEach(function(section) {
+                        section.style.display = 'none';
+                    });
+        
+                    // Show the corresponding category content section
+                    var targetId = 'category' + (index + 1); // Assuming IDs are category1, category2, etc.
+                    document.getElementById(targetId).style.display = 'block';
+                });
+            });
+        });
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        const delta = 5; // Minimum scroll amount to trigger the hide/show
+        const headerHeight = document.querySelector("header").offsetHeight; // Height of the header
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            const header = document.querySelector("header");
+
+            // Gradually change the header's opacity based on scroll position
+            if (currentScroll > 0) {
+                let opacity = 1 - (currentScroll / header.offsetHeight);
+                header.style.opacity = opacity >= 0 ? opacity : 0;
+            } else {
+                header.style.opacity = 1;
+            }
+        }, false);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var contentBoxes = document.querySelectorAll('.content-box');
+        
+            contentBoxes.forEach(function(box) {
+                box.addEventListener('click', function() {
+                    // Remove 'active' class from all boxes
+                    contentBoxes.forEach(b => b.classList.remove('active'));
+        
+                    // Add 'active' class to the clicked box
+                    box.classList.add('active');
+                });
+            });
+        });
+    </script>
+        
+        
+</body>
+</html>

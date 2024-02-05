@@ -1,0 +1,250 @@
+/* Basic Reset */
+*,
+*:before,
+*:after {
+    box-sizing: border-box; /* Use border-box box model */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+html {
+    width: 100vw; /* Full viewport width */
+    min-width: 100vw; /* Minimum viewport width */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    color: #333;
+    font-size: 22px;
+    background-color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header */
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top */
+    left: 0; /* Align to the left */
+    width: 100vw; /* Full viewport width */
+    z-index: 1000; /* High z-index to ensure it's on top */
+    transition: top 0.3s ease-in-out;
+    
+}
+
+.logo {
+    height: 100px; /* Adjust the logo size */
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #aaaaaa; /* Lighter color for hover state */
+}
+
+/* Main Header Image */
+/* Main Header Image - Ensure it stretches fully and is fixed during scroll */
+.main-header {
+    background: url('student_p_image.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Fix the background image during scroll */
+    font-size: 48px;
+    position: relative;
+    width: 100vw; /* Viewport width */
+    height: 45vh; /* Full viewport height */
+    margin-left: calc(-50vw + 50%); /* Center align the background */
+    z-index: 1; /* Ensure it's below the fixed header */
+}
+.overlay {
+    position: absolute;
+    font-size: 28px;
+    bottom: 0; /* Align to the bottom edge */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Adjust width as necessary */
+    padding: 20px; /* Add some padding */
+    z-index: 2; /* Above the background image but below the header */
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+
+.main-header h1, .main-header p {
+    color: white; /* White text for visibility */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for better readability */
+}
+
+/* Main Content */
+main {
+    
+    margin-top: -100vh; /* Pull main content up to sit below the header */
+    padding-top: 100vh; /* Add padding to push the content down, equal to the header's height */
+}
+
+/* Programs section */
+#programs {
+    text-align: center;
+    padding: 2em 0; /* Top and bottom padding */
+    padding-bottom: 0;
+}
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 2em;
+    padding-bottom: 0;
+}
+
+.opportunity-box {
+    background-color: transparent; /* Light grey background */
+    font-size: 14px;
+    padding: 1em;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    bottom:0;
+}
+
+.opportunity-box:hover, .opportunity-box:focus {
+    background-color: white; /* Slightly darker on hover or focus */
+}
+
+.opportunity-box a {
+    color: blue; /* Inherits the color from the parent */
+    display: block; /* Makes the link cover the whole box */
+}
+
+
+/* Minimalist bottom border under all boxes */
+
+/* Active state styles for opportunity box */
+.opportunity-box.active a {
+    color: blue; /* Changes color to blue */
+    text-decoration: underline; /* Underlines the text */
+}
+
+/* Style for the active part of the line */
+.active-line {
+    height: 2px;
+    background-color:#004687;
+    width: 33.33%; /* One-third of the container width */
+    position: absolute;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+/* Container for the line and active line */
+.line-container {
+    position: relative;
+    width: 95%;
+    margin: 20px auto;
+    margin-bottom:0;
+    height: 2px;
+    background-color: #ccc;
+}
+
+
+
+
+
+
+
+/* Category Content Section */
+.category-content {
+    display: flex; /* Change to flex for vertical stacking */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the items */
+    background-color: #f8f8f8; /* Light grey background */
+    padding: 40px;
+    padding-top: 80px;
+    margin-top: 0;
+}
+
+.content-box {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Border */
+    padding: 15px;
+    text-align: left;
+    width: 100%; /* Full width of the container */
+    position: relative; /* For positioning the arrow */
+    cursor: pointer; /* Change cursor to indicate clickability */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+/* Arrow on the right edge */
+.content-box::after {
+    content: '>';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #333;
+}
+
+/* Highlight border on click */
+.content-box.active {
+    border-color: #004687; /* Blue border for active box */
+}
+
+.content-box h3 {
+    color: #333; /* Darker text for headers */
+    margin-bottom: 10px;
+}
+
+.content-box p {
+    color: #666; /* Lighter text for description */
+    margin-bottom: 15px;
+}
+
+.content-box a {
+    color: #004687; /* Blue text for links */
+    text-decoration: none; /* No underline by default */
+    font-weight: bold;
+}
+
+.content-box a:hover, .content-box a:focus {
+    text-decoration: underline; /* Underline on hover or focus */
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer styles */
+footer {
+    background-color: #232323;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Add additional styling as needed */
