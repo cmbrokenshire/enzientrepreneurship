@@ -250,3 +250,61 @@ footer {
 /* Add additional styling as needed */
 
 
+
+
+/* Existing CSS for larger screens... */
+
+/* Responsive Styles for Mobile Devices */
+@media only screen and (max-width: 1400px) {
+    body {
+        font-size: 18px; /* Smaller font size for better readability on mobile */
+    }
+
+    header {
+        flex-direction: column; /* Stack header items vertically */
+        padding: 0.5em; /* Reduce padding in the header */
+    }
+
+    .logo {
+        height: 60px; /* Smaller logo for mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center-align the navigation items */
+        padding: 0; /* Remove padding */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for vertical layout */
+    }
+
+    nav ul li a {
+        padding: 8px 15px; /* Adjust padding for easier tapping */
+    }
+
+    .main-header {
+        height: 60vh; /* Adjust header height for mobile */
+        background-attachment: scroll; /* Change background attachment */
+    }
+
+    .overlay {
+        font-size: 10px; /* Adjust font size for overlay */
+        padding-top: 335px; /* Adjust padding */
+        position: static; /* Reset position */
+        transform: none; /* Reset transform */
+        white-space: normal; /* Allow text wrapping */
+    }
+
+    .main-header h1, .main-header p {
+        font-size: 24px; /* Adjust font size for readability */
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Adjust text shadow */
+    }
+
+    main {
+        margin-top: -30vh; /* Adjust margin to match the new header size */
+        padding-top: 30vh; /* Adjust padding to match the new header size */
+    }
+
+    /* Add any additional mobile-specific adjustments here */
+}
