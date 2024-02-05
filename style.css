@@ -599,3 +599,38 @@ footer nav ul li a:hover {
     
     /* Additional responsive adjustments can be added here */
 }
+
+
+@media only screen and (max-width: 1400px) {
+    .company-section {
+        width: auto; /* Adjust width for smaller screens */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .company-box {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 20px; /* Add some space between boxes */
+    }
+
+
+    .company-title, .company-title-link {
+        font-size: 18px; /* Slightly smaller font size */
+    }
+
+    .company-description {
+        font-size: 14px; /* Adjust font size for readability */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .learn-more-btn {
+        padding: 10px; /* Adjust button padding */
+        font-size: 14px; /* Adjust font size for buttons */
+    }
+
+    /* Optional: Adjust hover effects if they don't work well on touch devices */
+    .company-box:hover .company-image,
+    .company-box:hover .company-title-link {
+        transform: none;
+        color: inherit;
+    }
+}
