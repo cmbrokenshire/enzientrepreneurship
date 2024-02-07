@@ -66,7 +66,7 @@
             
         </section>
         <section id="application-section">
-            <form action="/submit-application" method="post" enctype="multipart/form-data">
+            <form id="applicationForm" action="http://127.0.0.1:5000/submit-application" method="post" enctype="multipart/form-data">
                 <div class="form-grid">
                     <div class="form-field">
                         <label for="firstName">First Name *</label>
@@ -94,14 +94,17 @@
                     <span class="file-upload-subtext">(.pdf, .doc, .docx, .txt)</span>
                     <label for="resume" class="file-upload-button">UPLOAD RESUME</label>
                     <input type="file" id="resume" name="resume" class="file-input" accept=".pdf, .doc, .docx, .txt" required>
+                    <div id="resumeFileName" class="file-upload-info"></div> <!-- Placeholder for file name -->
                 </div>
                 
                 <div class="file-upload">
                     <span class="file-upload-text">Additional Files*</span>
                     <span class="file-upload-subtext">Upload up to 5 supplemental documents (.pdf, .doc, .docx, .txt, .jpeg, .gif, .png), max 30MB each</span>
                     <label for="additionalFiles" class="file-upload-button">UPLOAD DOCUMENTS</label>
-                    <input type="file" id="additionalFiles" name="additionalFiles" class="file-input" accept=".pdf, .doc, .docx, .txt, .jpeg, .gif, .png" multiple>
+                    <input type="file" id="additionalFiles" name="additionalFiles[]" class="file-input" accept=".pdf, .doc, .docx, .txt, .jpeg, .gif, .png" multiple>
+                    <div id="additionalFilesNames" class="file-upload-info"></div>
                 </div>
+                
                 
                 
                 <div class="identification-section">
@@ -115,79 +118,79 @@
                             <label for="genderIdentity" class="identification-label">What gender identity do you most closely identify with?</label>
                             <select id="genderIdentity" name="genderIdentity" class="identification-select">
                                 <option value="">Please Select</option>
-                                <option value="">Agender</option>
-                                <option value="">Genderfluid</option>
-                                <option value="">Gender non-conforming</option>
-                                <option value="">Genderqueer</option>
-                                <option value="">Man</option>
-                                <option value="">Non-binary</option>
-                                <option value="">Woman</option>
-                                <option value="">Not Listed</option>
-                                <option value="">I choose not to disclose</option>
+                                <option value="Agender">Agender</option>
+                                <option value="Genderfluid">Genderfluid</option>
+                                <option value="Gender non-conforming">Gender non-conforming</option>
+                                <option value="Genderqueer">Genderqueer</option>
+                                <option value="Man">Man</option>
+                                <option value="Non-binary">Non-binary</option>
+                                <option value="Woman">Woman</option>
+                                <option value="Not Listed">Not Listed</option>
+                                <option value="I choose not to disclose">I choose not to disclose</option>
                             </select>
                         </div>
                         <div class="identification-field">
-                            <label for="genderIdentity" class="identification-label">Are you a person of transgender experience?</label>
-                            <select id="genderIdentity" name="genderIdentity" class="identification-select">
+                            <label for="transgenderExperience" class="identification-label">Are you a person of transgender experience?</label>
+                            <select id="transgenderExperience" name="transgenderExperience" class="identification-select">
                                 <option value="">Please Select</option>
-                                <option value="">Yes</option>
-                                <option value="">No</option>
-                                <option value="">I choose to not disclose</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="I choose to not disclose">I choose to not disclose</option>
                                 <!-- Add additional options here -->
                             </select>
                         </div>
                         <div class="identification-field">
-                            <label for="genderIdentity" class="identification-label">Please select the race and/or ethnic identities you identify with</label>
-                            <select id="genderIdentity" name="genderIdentity" class="identification-select">
+                            <label for="ethnicIdentity" class="identification-label">Please select the race and/or ethnic identities you identify with</label>
+                            <select id="ethnicIdentity" name="ethnicIdentityy" class="identification-select">
                                 <option value="">Please Select</option>
-                                <option value="">American Indian or Alaskan Native</option>
-                                <option value="">Asian</option>
-                                <option value="">Black or African America</option>
-                                <option value="">Hispanic or Latinx</option>
-                                <option value="">Middle Eastern or North African</option>
-                                <option value="">Native Hawaiian or Other Pacific Islander</option>
-                                <option value="">White</option>
-                                <option value="">I choose not to disclose</option>
+                                <option value="American Indian or Alaskan Native">American Indian or Alaskan Native</option>
+                                <option value="Asian">Asian</option>
+                                <option value="Black or African America">Black or African America</option>
+                                <option value="Hispanic or Latinx">Hispanic or Latinx</option>
+                                <option value="Middle Eastern or North African">Middle Eastern or North African</option>
+                                <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+                                <option value="White">White</option>
+                                <option value="I choose not to disclose">I choose not to disclose</option>
                                 <!-- Add additional options here -->
                             </select>
                         </div>
                         <div class="identification-field">
-                            <label for="genderIdentity" class="identification-label">What sexual orientation do you most closely identify with?</label>
-                            <select id="genderIdentity" name="genderIdentity" class="identification-select">
+                            <label for="sexualOrientation" class="identification-label">What sexual orientation do you most closely identify with?</label>
+                            <select id="sexualOrientation" name="sexualOrientation" class="identification-select">
                                 <option value="">Please Select</option>
-                                <option value="">Asexual</option>
-                                <option value="">Bisexual</option>
-                                <option value="">Gay</option>
-                                <option value="">Heterosexual</option>
-                                <option value="">Lesbian</option>
-                                <option value="">Pansexual</option>
-                                <option value="">Queer</option>
-                                <option value="">Not Listed</option>
-                                <option value="">I choose not to disclose</option>
+                                <option value="Asexual">Asexual</option>
+                                <option value="Bisexual">Bisexual</option>
+                                <option value="Gay">Gay</option>
+                                <option value="Heterosexual">Heterosexual</option>
+                                <option value="Lesbian">Lesbian</option>
+                                <option value="Pansexual">Pansexual</option>
+                                <option value="Queer">Queer</option>
+                                <option value="Not Listed">Not Listed</option>
+                                <option value="I choose not to disclose">I choose not to disclose</option>
                                 <!-- Add additional options here -->
                             </select>
                         </div>
                         <div class="identification-field">
-                            <label for="genderIdentity" class="identification-label">Do you live with a disability (as outlined by the ADA)?</label>
-                            <select id="genderIdentity" name="genderIdentity" class="identification-select">
+                            <label for="disabilityStatus" class="identification-label">Do you live with a disability (as outlined by the ADA)?</label>
+                            <select id="disabilityStatus" name="disabilityStatus" class="identification-select">
                                 <option value="">Please Select</option>
-                                <option value="">Yes</option>
-                                <option value="">No</option>
-                                <option value="">I choose not to disclose</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="I choose not to disclose">I choose not to disclose</option>
                                 <!-- Add additional options here -->
                             </select>
                         </div>
                         <div class="identification-field">
-                            <label for="genderIdentity" class="identification-label">
+                            <label for="veteranStatus" class="identification-label">
                                 Are you a veteran/have you served in the military?</label>
-                            <select id="genderIdentity" name="genderIdentity" class="identification-select">
+                            <select id="veteranStatus" name="veteranStatus" class="identification-select">
                                 <option value="">Please Select</option>
-                                <option value="">Serving in Reserves/National Guard</option>
-                                <option value="">No Military Service</option>
-                                <option value="">Protected Veteran</option>
-                                <option value="">Non-Protected Veteran</option>
-                                <option value="">Not Listed</option>
-                                <option value="">I choose not to disclose</option>
+                                <option value="Serving in Reserves/National Guard">Serving in Reserves/National Guard</option>
+                                <option value="No Military Service">No Military Service</option>
+                                <option value="Protected Veteran">Protected Veteran</option>
+                                <option value="Non-Protected Veteran">Non-Protected Veteran</option>
+                                <option value="Not Listed">Not Listed</option>
+                                <option value="I choose not to disclose">I choose not to disclose</option>
 
                                 <!-- Add additional options here -->
                             </select>
@@ -197,6 +200,9 @@
                     <!-- Repeat for other questions -->
                 </div>
                 <button type="submit" class="submit-button">SUBMIT APPLICATION</button>
+                <div id="loadingMessage" style="display: none;">Submitting, please wait...</div>
+                <div id="formResponse" style="color: green;"></div>
+                
                 
             </form>
         </section>
@@ -211,6 +217,102 @@
             applicationSection.scrollIntoView({ behavior: 'smooth' });
         });
     </script>
+    <script>
+        document.getElementById('resume').addEventListener('change', function() {
+            var fileName = document.getElementById('resume').files[0]?.name;
+            document.getElementById('resumeFileName').textContent = fileName ? 'Selected file: ' + fileName : '';
+        });
+    
+        
+        </script>
+    <!-- <script>
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+    
+            fetch('/submit-application', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('formResponse').textContent = data;
+                document.querySelector('.submit-button').style.display = 'none';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script> -->
+    
+    <script>
+        let selectedFiles = [];
+        
+        document.getElementById('additionalFiles').addEventListener('change', function() {
+            // Add the newly selected files to the existing array
+            Array.from(this.files).forEach(file => {
+                if (selectedFiles.length < 5 && !selectedFiles.some(f => f.name === file.name)) {
+                    selectedFiles.push(file);
+                }
+            });
+    
+            // Check if the total number exceeds the limit
+            if (selectedFiles.length > 5) {
+                alert('You can only upload up to 5 documents.');
+                selectedFiles = selectedFiles.slice(0, 5); // Keep only the first 5 files
+            }
+    
+            // Update the display with the file names
+            document.getElementById('additionalFilesNames').textContent =
+                selectedFiles.length > 0 ? 'Selected files: ' + selectedFiles.map(file => file.name).join(', ') : '';
+        });
+    
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+    
+            var submitButton = document.querySelector('.submit-button');
+            var loadingMessage = document.getElementById('loadingMessage');
+            var formResponse = document.getElementById('formResponse');
+    
+            // Hide the submit button and show the loading message
+            submitButton.style.display = 'none';
+            loadingMessage.style.display = 'block';
+    
+            var formData = new FormData(this);
+            
+            // Append each file from selectedFiles to formData
+            selectedFiles.forEach(file => {
+                formData.append('additionalFiles[]', file);
+            });
+    
+            // Send formData to the server
+            fetch('http://127.0.0.1:5000/submit-application', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                formResponse.textContent = data.message;
+                formResponse.style.color = 'green';
+                // Keep the submit button hidden
+                submitButton.style.display = 'none';
+                loadingMessage.style.display = 'none';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                formResponse.textContent = "Error submitting application: " + error;
+                formResponse.style.color = 'red';
+                // Keep the submit button hidden in case of error
+                submitButton.style.display = 'none';
+                loadingMessage.style.display = 'none';
+            });
+        });
+    </script>
+    
+    
+    
+    
+    
 </body>
 </html>
 
