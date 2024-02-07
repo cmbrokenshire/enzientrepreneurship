@@ -76,12 +76,13 @@ nav ul li a:hover {
     height: 45vh; /* Full viewport height */
     margin-left: calc(-50vw + 50%); /* Center align the background */
     z-index: 1; /* Ensure it's below the fixed header */
+    padding-left: 20px;
 }
 .overlay {
     position: absolute;
     font-size: 28px;
     bottom: 0; /* Align to the bottom edge */
-    left: 0; /* Align to the left edge */
+    padding-left: 60px; /* Align to the left edge */
     width: 100%; /* Adjust width as necessary */
     padding: 20px; /* Add some padding */
     z-index: 2; /* Above the background image but below the header */
