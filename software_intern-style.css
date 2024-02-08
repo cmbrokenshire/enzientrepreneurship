@@ -1,0 +1,400 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box; /* Use border-box box model */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+html {
+    width: 100vw; /* Full viewport width */
+    min-width: 100vw; /* Minimum viewport width */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    color: #333;
+    font-size: 22px;
+    
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header */
+header {
+    background-color: #004687;
+    height: 20vw;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1em 2em;
+    position: relative; /* Fixed position */
+    top: 0; /* Stick to the top */
+    left: 0; /* Align to the left */
+    width: 100vw; /* Full viewport width */
+    z-index: 1000; /* High z-index to ensure it's on top */
+    transition: top 0.3s ease-in-out;
+    
+}
+
+.logo {
+    height: 65px; /* Adjust the logo size */
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #aaaaaa; /* Lighter color for hover state */
+}
+
+/* Main Header Image */
+/* Main Header Image - Ensure it stretches fully and is fixed during scroll */
+.main-header {
+    position: relative; /* ensure positioning context for z-index */
+    z-index: 1001; 
+    background: url('engineering_image.jpeg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 48px;
+    position: relative;
+    width: 85vw;
+    height: 40vh; /* lower z-index */
+    left: 42%; /* move to 50% from the left of the viewport */
+    transform: translateX(-50%); /* shift back 50% of its own width */
+    margin-left: auto;
+    margin-right: auto;
+    top: -200px; 
+}
+
+
+
+.overlay {
+    position: absolute;
+    font-size: 28px;
+    bottom: 0; /* Align to the bottom edge */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Adjust width as necessary */
+    padding: 20px; /* Add some padding */
+    z-index: 2; /* Above the background image but below the header */
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+
+.main-header h1, .main-header p {
+    color: white; /* White text for visibility */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for better readability */
+}
+
+/* Main Content */
+main {
+    
+    margin-top: -100vh; /* Pull main content up to sit below the header */
+    padding-top: 100vh; /* Add padding to push the content down, equal to the header's height */
+}
+
+#programs {
+    position: relative;
+    background: #fff; /* or any color you prefer */
+    width: 80vw;
+    margin-top: -300px; /* Adjust this value as needed to overlap */
+    z-index: 1002; /* higher z-index to overlap the main header */
+    left: 50%; /* move to 50% from the left of the viewport */
+    transform: translateX(-50%); /* shift back 50% of its own width */
+    /* additional styling for the section */
+}
+
+#programs .scroll-to-application {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 5%; /* Position from the top */
+    right: 10%; /* Use percentage for responsive positioning */
+    width: 150px;
+    display: inline-block;
+    background-color: transparent; /* Keeps the background transparent */
+    color: #004687; /* Navy blue text color */
+    border: 2px solid #004687; /* Navy blue border */
+    padding: 10px 20px; /* Increased padding for a larger button */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center; /* Center text inside the button */
+    z-index: 1003; /* Ensure it is above other elements */
+}
+
+
+#application-section:target + #programs .scroll-to-application {
+    display: none;
+}
+
+#programs .scroll-to-application:hover {
+    background-color: #004687; /* Navy blue background on hover */
+    color: white; /* White text color on hover */
+}
+
+
+#programs h2 {
+    font-size: 16px
+    
+}
+
+#programs .column {
+    width: 70%; /* One third of the container */
+    padding:3.38rem; /* Optional: padding for spacing inside the column */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    /* Additional styling as needed */
+}
+
+#programs h2 {
+    font-size: 36px;
+    /* Additional styling as needed */
+}
+
+#programs h3 {
+    font-size: 30px;
+    margin-top: 40px;
+    /* Additional styling as needed */
+}
+
+#programs p {
+    margin-top: 40px;
+    font-size: 16px;
+    /* Additional styling as needed */
+}
+
+#programs ul {
+    font-size: 16px;
+    margin-top: 20px; /* Space between h3 and the list */
+    padding-left: 20px; /* Indentation for bullet points */
+    /* Additional styling as needed */
+}
+
+#programs li {
+    font-size: 16px;
+    margin-bottom: 10px; /* Space between list items */
+    /* Additional styling as needed */
+}
+
+#application-section {
+    background-color: #fff;
+    padding: 50px;
+    width: 80vw;
+    position: relative; /* Added for consistency with #programs */
+    left: 50%; /* Center align the section */
+    transform: translateX(-50%); /* Shift back to align perfectly with #programs */
+    margin-top: 2px; /* Adjust as needed for spacing */
+    z-index: 1001; /* Ensure it's below #programs if they overlap */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+#application-section .form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+#application-section .form-field {
+    width: calc(50% - 15px); /* Adjust width for 2x2 grid */
+    margin-bottom: 20px;
+}
+
+#application-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 16px
+}
+
+#application-section input[type="text"],
+#application-section input[type="email"],
+#application-section input[type="tel"],
+#application-section input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+#application-section .button-row {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+}
+
+#application-section .upload-button,
+#application-section button[type="submit"] {
+    background-color: #004687;
+    color: white;
+    padding: 10px;
+    border-radius: 0;
+    cursor: pointer;
+    font-weight: normal;
+    text-transform: normal;
+    display: block; /* Full width */
+    text-align: center;
+}
+
+#application-section .upload-button:hover,
+#application-section button[type="submit"]:hover {
+    background-color: #004687;
+}
+
+.file-upload {
+    margin-top: 20px; /* Space between file upload sections */
+    text-align: left; /* Align to the left */
+}
+
+.file-upload-text {
+    display: block; /* Make text a block-level element */
+    font-weight: normal;
+    margin-bottom: 5px; /* Space between text and button */
+    font-size: 16px;
+}
+.file-upload-subtext {
+    display: block; /* Make text a block-level element */
+    font-weight: normal;
+    margin-bottom: 5px; /* Space between text and button */
+    font-size: 12px;
+}
+
+.file-upload-button {
+    width: 300px;
+    display: inline-block;
+    background-color: transparent; /* Keeps the background transparent */
+    color: #004687; /* Navy blue text color */
+    border: 2px solid #004687; /* Navy blue border */
+    padding: 10px 20px; /* Increased padding for a larger button */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.file-upload-button:hover {
+    background-color: #004687; /* Navy blue background on hover */
+    color: white; /* White text color on hover */
+}
+
+.file-input {
+    display: none; /* Hide the default file input */
+}
+
+.submit-button {
+    background-color: #004687;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block; /* Full width */
+    margin-top: 30px;
+}
+
+.submit-button:hover {
+    background-color: #004687;
+}
+
+.identification-section {
+    margin-top: 80px; /* Space between sections */
+    text-align: left; /* Align to the left */
+}
+
+.identification-text {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.identification-subtext {
+    padding-top: 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: normal;
+    width: 66.66%; /* Two-thirds of the container width */
+    /* Centers the block within the container */
+    padding-bottom: 20px;
+}
+
+
+.identification-field {
+    margin-bottom: 15px;
+}
+
+.identification-label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.identification-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.identification-field {
+    width: calc(50% - 10px); /* Adjust width for 2x3 grid */
+    margin-bottom: 20px;
+}
+
+.identification-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.identification-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
+    -webkit-appearance: none; /* Removes default styling of select in WebKit browsers */
+    -moz-appearance: none; /* Removes default styling of select in Mozilla browsers */
+    appearance: none; /* Removes default styling */
+    position: relative; /* For custom arrow positioning */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.identification-select:hover {
+    border-color: #004687; /* Navy blue border on hover */
+}
+
+.identification-select::after {
+    /* Custom arrow styling */
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-top-color: #004687; /* Navy blue arrow */
+    pointer-events: none; /* Prevents the arrow from being clickable */
+}
+
