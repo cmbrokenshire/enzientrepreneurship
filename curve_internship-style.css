@@ -18,6 +18,7 @@ body {
     padding: 0;
     color: #333;
     font-size: 22px;
+    
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
@@ -70,8 +71,7 @@ nav ul li a:hover {
 .main-header {
     position: relative; /* ensure positioning context for z-index */
     z-index: 1001; 
-    background: url('intern_image.png') no-repeat center center;
-    font-family: "Poppins";
+    background: url('cu.jpeg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     font-size: 48px;
@@ -89,7 +89,7 @@ nav ul li a:hover {
 
 .overlay {
     position: absolute;
-    
+    font-size: 28px;
     bottom: 0; /* Align to the bottom edge */
     left: 0; /* Align to the left edge */
     width: 100%; /* Adjust width as necessary */
@@ -397,7 +397,4 @@ main {
     border-top-color: #004687; /* Navy blue arrow */
     pointer-events: none; /* Prevents the arrow from being clickable */
 }
-
-
-
 
