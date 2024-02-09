@@ -9,6 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 </head>
 <body>
     
@@ -41,49 +43,49 @@
             <div class="video-container">
                 <a href="https://www.youtube.com/watch?v=nPEl7COdk70" class="watch-story-btn" target="_blank">Watch Our Story</a>
             </div>
-            <div class="buttons-container"> <!-- Start of button wrapper -->
+            <div class="buttons-container"> 
                 <button id="btn-individuals">Individuals </button>
                 <button id="btn-company">Company </button>
             </div>
         </section>
         
         <section id="individuals" style="display: none;">
-            <!-- Repeat this block for each individual -->
+            
             <div class="profiles-container">
                 <div class="profile">
                     <img src="Bill_Schafer.jpeg" alt="Name" class="profile-pic">
                     <h3 class="profile-name">BILL BILL SCHAFER</h3>
                     <p class="profile-title">CHIEF EXECUTIVE OFFICER</p>
                     <p class="profile-bio">Bill led a team that built one of the first hybrid electric vehicles in the early 90’s. He has over 20 years tech startup experience with 6 years in Kenya.</p>
-                    <!-- Optional: Social Media or Contact Links -->
+                   
                 </div>
                 <div class="profile">
                     <img src="MUSYOKI_MUINDI.jpeg" alt="Name" class="profile-pic">
                     <h3 class="profile-name">MUSYOKI MUINDI</h3>
                     <p class="profile-title">CHIEF OPERATING OFFICER</p>
                     <p class="profile-bio">Musyoki helped run one of the largest retail gasoline stations in Kenya for several years and has over 20 years regional and international experience in operations and management.</p>
-                    <!-- Optional: Social Media or Contact Links -->
+                   
                 </div>
                 <div class="profile">
                     <img src="GEORGE_MUCHAI.jpeg" alt="Name" class="profile-pic">
                     <h3 class="profile-name">GEORGE MUCHAI</h3>
                     <p class="profile-title">LEAD ENGINEER</p>
                     <p class="profile-bio">George is a mechatronics engineer and built one of the first electric motorcycles in Africa. He brings the perfect mix to the team with his years of experience and innovative solutions.</p>
-                    <!-- Optional: Social Media or Contact Links -->
+                    
                 </div>
                 <div class="profile">
                     <img src="CAROLINE_OMONDI.jpeg" alt="Name" class="profile-pic">
                     <h3 class="profile-name">CAROLINE OMONDI</h3>
                     <p class="profile-title">LEAD, PEOPLE & CULTURE</p>
                     <p class="profile-bio">Caroline brings a wealth of experience in corporate culture. With over 18 years in HR and 10 specifically in Organizational Culture, she's an expert and an integral member of the team.</p>
-                    <!-- Optional: Social Media or Contact Links -->
+                  
                 </div>
             </div>
         </section>
         
         <section id="company" style="display: none;">
             <div class="company-section">
-                <!-- Repeat this block for each box -->
+                
                 <div class="company-box">
                     <div class="image-container">
                         <img src="1696848202012.jpeg" alt="Service Name" class="company-image">
@@ -180,14 +182,14 @@
     
     <script>
         let lastScrollTop = 0;
-        const delta = 5; // Minimum scroll amount to trigger the hide/show
-        const headerHeight = document.querySelector("header").offsetHeight; // Height of the header
+        const delta = 5; 
+        const headerHeight = document.querySelector("header").offsetHeight;
 
         window.addEventListener("scroll", function() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             const header = document.querySelector("header");
 
-            // Gradually change the header's opacity based on scroll position
+            
             if (currentScroll > 0) {
                 let opacity = 1 - (currentScroll / header.offsetHeight);
                 header.style.opacity = opacity >= 0 ? opacity : 0;
@@ -197,7 +199,7 @@
         }, false);
     </script>
     <script>
-        // Your JavaScript code goes here
+        
         document.getElementById('btn-individuals').addEventListener('click', function() {
             document.getElementById('individuals').style.display = 'block';
             document.getElementById('company').style.display = 'none';
@@ -210,17 +212,17 @@
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Your JavaScript code
+            
             document.getElementById('btn-company').click();
         });
     </script>
     <script>
         document.querySelectorAll('#discover button').forEach(button => {
             button.addEventListener('click', function() {
-                // Remove active class from all buttons
+                
                 document.querySelectorAll('#discover button').forEach(btn => btn.classList.remove('active'));
 
-                // Add active class to the clicked button
+                
                 this.classList.add('active');
             });
         });
@@ -228,15 +230,15 @@
     <script>
         document.querySelector('.right-arrow').addEventListener('click', () => {
             document.querySelector('.program-box-container').scrollBy({ 
-                left: 300, // Adjust scroll amount as needed
-                behavior: 'smooth' // Smooth scroll
+                left: 300, 
+                behavior: 'smooth' 
             });
         });
 
         document.querySelector('.left-arrow').addEventListener('click', () => {
             document.querySelector('.program-box-container').scrollBy({ 
-                left: -300, // Adjust scroll amount as needed
-                behavior: 'smooth' // Smooth scroll
+                left: -300, 
+                behavior: 'smooth' 
             });
         });
 

@@ -36,15 +36,15 @@
             <div class="opportunity-grid">
                 <div class="opportunity-box">
                     <h2>All Programs</h2>
-                    <!-- Content -->
+                    
                 </div>
                 <div class="opportunity-box">
                     <h2>Internships</h2>
-                    <!-- Content -->
+                    
                 </div>
                 <div class="opportunity-box">
                     <h2>Apprenticeships</h2>
-                    <!-- Content -->
+                    
                 </div>
             </div>
             <div class="line-container">
@@ -80,7 +80,7 @@
             </div>
         </section>
     
-        <!-- Category content for "Internships" -->
+        
         <section class="category-content" id="category2" style="display: none;">
             <div class="content-box">
                 <h3>Machine Learning Spring Research Associate - Infrastructure Optimization Internship - (8 weeks) </h3>
@@ -99,13 +99,13 @@
             </div>
         </section>
     
-        <!-- Category content for "Apprenticeships" -->
+        
         <section class="category-content" id="category3" style="display: none;">
         </section>
     </main>
 
     <footer>
-        <!-- Footer content -->
+        
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -114,13 +114,13 @@
         
             boxes.forEach(function(box, index) {
                 box.addEventListener('click', function() {
-                    // Remove active class from all boxes
+                    
                     boxes.forEach(b => b.classList.remove('active'));
         
-                    // Add active class to the clicked box
+                    
                     box.classList.add('active');
         
-                    // Move the active line under the clicked box
+                    
                     activeLine.style.transform = 'translateX(' + (index * 100) + '%)';
                 });
             });
@@ -129,13 +129,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var boxes = document.querySelectorAll('.opportunity-box');
-        
             boxes.forEach(function(box) {
                 box.addEventListener('click', function() {
-                    // Remove active class from all boxes
                     boxes.forEach(b => b.classList.remove('active'));
-        
-                    // Add active class to the clicked box
                     this.classList.add('active');
                 });
             });
@@ -145,16 +141,12 @@
         document.addEventListener('DOMContentLoaded', function() {
             var opportunityBoxes = document.querySelectorAll('.opportunity-box');
             var contentSections = document.querySelectorAll('.category-content');
-        
             opportunityBoxes.forEach(function(box, index) {
                 box.addEventListener('click', function() {
-                    // Hide all category content sections
                     contentSections.forEach(function(section) {
                         section.style.display = 'none';
                     });
-        
-                    // Show the corresponding category content section
-                    var targetId = 'category' + (index + 1); // Assuming IDs are category1, category2, etc.
+                    var targetId = 'category' + (index + 1); 
                     document.getElementById(targetId).style.display = 'block';
                 });
             });
@@ -162,14 +154,12 @@
     </script>
     <script>
         let lastScrollTop = 0;
-        const delta = 5; // Minimum scroll amount to trigger the hide/show
-        const headerHeight = document.querySelector("header").offsetHeight; // Height of the header
+        const delta = 5;
+        const headerHeight = document.querySelector("header").offsetHeight; 
 
         window.addEventListener("scroll", function() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             const header = document.querySelector("header");
-
-            // Gradually change the header's opacity based on scroll position
             if (currentScroll > 0) {
                 let opacity = 1 - (currentScroll / header.offsetHeight);
                 header.style.opacity = opacity >= 0 ? opacity : 0;
@@ -184,10 +174,7 @@
         
             contentBoxes.forEach(function(box) {
                 box.addEventListener('click', function() {
-                    // Remove 'active' class from all boxes
                     contentBoxes.forEach(b => b.classList.remove('active'));
-        
-                    // Add 'active' class to the clicked box
                     box.classList.add('active');
                 });
             });

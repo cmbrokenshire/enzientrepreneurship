@@ -3,18 +3,18 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Our Team Section</title>
-    <!-- Font Awesome -->
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <!-- Google Font -->
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
       rel="stylesheet"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Stylesheet -->
+    
     <link rel="stylesheet" href="about_us-style.css" />
   </head>
 
@@ -52,7 +52,7 @@
                 <h2>Our Team</h2>
             </div>
             <div class="row">
-                <!-- Column 1-->
+                
                 <div class="column">
                 <div class="card">
                     <div class="img-container">
@@ -99,9 +99,9 @@
                     </div>
                 </div>
                 </div>
-                <!-- Column 2-->
                 
-                <!-- Column 3-->
+                
+                
                 <div class="column">
                 <div class="card">
                     <div class="img-container">
@@ -131,14 +131,14 @@
 
     <script>
         let lastScrollTop = 0;
-        const delta = 5; // Minimum scroll amount to trigger the hide/show
-        const headerHeight = document.querySelector("header").offsetHeight; // Height of the header
+        const delta = 5; 
+        const headerHeight = document.querySelector("header").offsetHeight; 
 
         window.addEventListener("scroll", function() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             const header = document.querySelector("header");
 
-            // Gradually change the header's opacity based on scroll position
+       
             if (currentScroll > 0) {
                 let opacity = 1 - (currentScroll / header.offsetHeight);
                 header.style.opacity = opacity >= 0 ? opacity : 0;

@@ -1,16 +1,16 @@
-/* Basic Reset */
+
 *,
 *:before,
 *:after {
-    box-sizing: border-box; /* Use border-box box model */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
 }
 
 html {
-    width: 100vw; /* Full viewport width */
-    min-width: 100vw; /* Minimum viewport width */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    width: 100vw; 
+    min-width: 100vw; 
+    overflow-x: hidden; 
 }
 
 body {
@@ -20,30 +20,30 @@ body {
     font-size: 22px;
     background-color: #fff;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
 }
 
-/* Header */
+
 header {
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
-    position: fixed; /* Fixed position */
-    top: 0; /* Stick to the top */
-    left: 0; /* Align to the left */
-    width: 100vw; /* Full viewport width */
-    z-index: 1000; /* High z-index to ensure it's on top */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    z-index: 1000; 
     transition: top 0.3s ease-in-out;
     
 }
 
 .logo {
-    height: 100px; /* Adjust the logo size */
+    height: 100px; 
 }
 
-/* Navigation Menu */
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -63,56 +63,56 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #aaaaaa; /* Lighter color for hover state */
+    color: #aaaaaa; 
 }
 
-/* Main Header Image */
-/* Main Header Image - Ensure it stretches fully and is fixed during scroll */
+
+
 .main-header {
     background: url('student_p_image.png') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* Fix the background image during scroll */
+    background-attachment: fixed; 
     font-size: 48px;
     position: relative;
-    width: 100vw; /* Viewport width */
-    height: 45vh; /* Full viewport height */
-    margin-left: calc(-50vw + 50%); /* Center align the background */
-    z-index: 1; /* Ensure it's below the fixed header */
+    width: 100vw; 
+    height: 45vh; 
+    margin-left: calc(-50vw + 50%); 
+    z-index: 1; 
     padding-left: 20px;
 }
 .overlay {
     position: absolute;
     font-family: "Poppins";
     font-size: 36px;
-    bottom: 0; /* Align to the bottom edge */
-    padding-left: 60px; /* Align to the left edge */
-    width: 100%; /* Adjust width as necessary */
-    padding: 20px; /* Add some padding */
-    z-index: 2; /* Above the background image but below the header */
-    text-align: left; /* Align text to the left */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    bottom: 0; 
+    padding-left: 60px; 
+    width: 100%; 
+    padding: 20px; 
+    z-index: 2; 
+    text-align: left; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
 
 .main-header h1, .main-header p {
-    color: white; /* White text for visibility */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for better readability */
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
 }
 
-/* Main Content */
+
 main {
     
-    margin-top: -100vh; /* Pull main content up to sit below the header */
-    padding-top: 100vh; /* Add padding to push the content down, equal to the header's height */
+    margin-top: -100vh; 
+    padding-top: 100vh; 
 }
 
-/* Programs section */
+
 #programs {
     
     text-align: center;
-    padding: 2em 0; /* Top and bottom padding */
+    padding: 2em 0; 
     padding-bottom: 0;
 }
 
@@ -127,43 +127,43 @@ main {
 .opportunity-box {
     font-family: "Poppins";
     font-weight: 500;
-    background-color: transparent; /* Light grey background */
+    background-color: transparent; 
     font-size: 14px;
     padding: 1em;
     text-align: center;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    transition: background-color 0.3s, color 0.3s; 
     bottom:0;
 }
 
 .opportunity-box:hover, .opportunity-box:focus {
-    background-color: white; /* Slightly darker on hover or focus */
+    background-color: white; 
 }
 
 .opportunity-box a {
-    color: blue; /* Inherits the color from the parent */
-    display: block; /* Makes the link cover the whole box */
+    color: blue; 
+    display: block; 
 }
 
 
-/* Minimalist bottom border under all boxes */
 
-/* Active state styles for opportunity box */
+
+
 .opportunity-box.active a {
-    color: blue; /* Changes color to blue */
-    text-decoration: underline; /* Underlines the text */
+    color: blue; 
+    text-decoration: underline; 
 }
 
-/* Style for the active part of the line */
+
 .active-line {
     height: 2px;
     background-color:#004687;
-    width: 33.33%; /* One-third of the container width */
+    width: 33.33%; 
     position: absolute;
     bottom: 0;
     transition: all 0.3s ease;
 }
 
-/* Container for the line and active line */
+
 .line-container {
     position: relative;
     width: 95%;
@@ -179,30 +179,30 @@ main {
 
 
 
-/* Category Content Section */
+
 .category-content {
     
-    display: flex; /* Change to flex for vertical stacking */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align the items */
-    background-color: #f8f8f8; /* Light grey background */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #f8f8f8; 
     padding: 40px;
     padding-top: 80px;
     margin-top: 0;
 }
 
 .content-box {
-    background-color: #fff; /* White background */
-    border: 1px solid #ddd; /* Border */
+    background-color: #fff; 
+    border: 1px solid #ddd; 
     padding: 15px;
     text-align: left;
-    width: 100%; /* Full width of the container */
-    position: relative; /* For positioning the arrow */
-    cursor: pointer; /* Change cursor to indicate clickability */
-    transition: border-color 0.3s; /* Smooth transition for border color */
+    width: 100%; 
+    position: relative; 
+    cursor: pointer; 
+    transition: border-color 0.3s; 
 }
 
-/* Arrow on the right edge */
+
 .content-box::after {
     content: '>';
     position: absolute;
@@ -213,30 +213,30 @@ main {
     color: #333;
 }
 
-/* Highlight border on click */
+
 .content-box.active {
-    border-color: #004687; /* Blue border for active box */
+    border-color: #004687; 
 }
 
 .content-box h3 {
     font-family: "Poppins";
-    color: #333; /* Darker text for headers */
+    color: #333; 
     margin-bottom: 10px;
 }
 
 .content-box p {
-    color: #666; /* Lighter text for description */
+    color: #666; 
     margin-bottom: 15px;
 }
 
 .content-box a {
-    color: #004687; /* Blue text for links */
-    text-decoration: none; /* No underline by default */
+    color: #004687; 
+    text-decoration: none; 
     font-weight: bold;
 }
 
 .content-box a:hover, .content-box a:focus {
-    text-decoration: underline; /* Underline on hover or focus */
+    text-decoration: underline; 
 }
 
 
@@ -248,7 +248,7 @@ main {
 
 
 
-/* Footer styles */
+
 footer {
     background-color: #232323;
     color: white;
@@ -256,64 +256,64 @@ footer {
     padding: 20px 0;
 }
 
-/* Add additional styling as needed */
 
 
 
 
-/* Existing CSS for larger screens... */
 
-/* Responsive Styles for Mobile Devices */
+
+
+
 @media only screen and (max-width: 1400px) {
     body {
-        font-size: 18px; /* Smaller font size for better readability on mobile */
+        font-size: 18px; 
     }
 
     header {
-        flex-direction: column; /* Stack header items vertically */
-        padding: 0.5em; /* Reduce padding in the header */
+        flex-direction: column; 
+        padding: 0.5em; 
     }
 
     .logo {
-        height: 60px; /* Smaller logo for mobile */
+        height: 60px; 
     }
 
     nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center; /* Center-align the navigation items */
-        padding: 0; /* Remove padding */
+        flex-direction: column; 
+        align-items: center; 
+        padding: 0; 
     }
 
     nav ul li {
-        margin: 10px 0; /* Adjust margin for vertical layout */
+        margin: 10px 0; 
     }
 
     nav ul li a {
-        padding: 8px 15px; /* Adjust padding for easier tapping */
+        padding: 8px 15px; 
     }
 
     .main-header {
-        height: 60vh; /* Adjust header height for mobile */
-        background-attachment: scroll; /* Change background attachment */
+        height: 60vh; 
+        background-attachment: scroll; 
     }
 
     .overlay {
-        font-size: 10px; /* Adjust font size for overlay */
-        padding-top: 335px; /* Adjust padding */
-        position: static; /* Reset position */
-        transform: none; /* Reset transform */
-        white-space: normal; /* Allow text wrapping */
+        font-size: 10px; 
+        padding-top: 335px; 
+        position: static; 
+        transform: none; 
+        white-space: normal; 
     }
 
     .main-header h1, .main-header p {
-        font-size: 24px; /* Adjust font size for readability */
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Adjust text shadow */
+        font-size: 24px; 
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
     }
 
     main {
-        margin-top: -30vh; /* Adjust margin to match the new header size */
-        padding-top: 30vh; /* Adjust padding to match the new header size */
+        margin-top: -30vh; 
+        padding-top: 30vh; 
     }
 
-    /* Add any additional mobile-specific adjustments here */
+    
 }

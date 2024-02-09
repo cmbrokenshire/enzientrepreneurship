@@ -1,16 +1,15 @@
-/* Basic Reset */
 *,
 *:before,
 *:after {
-    box-sizing: border-box; /* Use border-box box model */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    width: 100vw; /* Full viewport width */
-    min-width: 100vw; /* Minimum viewport width */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    width: 100vw;
+    min-width: 100vw; 
+    overflow-x: hidden; 
 }
 
 body {
@@ -20,30 +19,30 @@ body {
     font-size: 22px;
     background-color: #fff;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
-/* Header */
+
 header {
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
-    position: fixed; /* Fixed position */
-    top: 0; /* Stick to the top */
-    left: 0; /* Align to the left */
-    width: 100vw; /* Full viewport width */
-    z-index: 1000; /* High z-index to ensure it's on top */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    z-index: 1000; 
     transition: top 0.3s ease-in-out;
     
 }
 
 .logo {
-    height: 100px; /* Adjust the logo size */
+    height: 100px; 
 }
 
-/* Navigation Menu */
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -63,21 +62,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #aaaaaa; /* Lighter color for hover state */
-}
+    color: #aaaaaa; 
 
-/* Main Header Image */
-/* Main Header Image - Ensure it stretches fully and is fixed during scroll */
+}
 .main-header {
     background: url('combo_3.png') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* Fix the background image during scroll */
+    background-attachment: fixed; 
     font-size: 48px;
     position: relative;
-    width: 100vw; /* Viewport width */
-    height: 100vh; /* Full viewport height */
-    margin-left: calc(-50vw + 50%); /* Center align the background */
-    z-index: 1; /* Ensure it's below the fixed header */
+    width: 100vw; 
+    height: 100vh; 
+    margin-left: calc(-50vw + 50%);
+    z-index: 1; 
 }
 .overlay {
     font-family:"Poppins";
@@ -85,98 +82,96 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2; /* Above the background image but below the header */
+    z-index: 2; 
 }
 
 .main-header h1, .main-header p {
-    color: white; /* White text for visibility */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for better readability */
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-/* Main Content */
+
 main {
     
-    margin-top: -100vh; /* Pull main content up to sit below the header */
-    padding-top: 100vh; /* Add padding to push the content down, equal to the header's height */
+    margin-top: -100vh; 
+    padding-top: 100vh; 
 }
 
-/* Styling the Discover Enzi Section */
+
 #discover {
-    background-color: white; /* Light gray background */
+    background-color: white;
     font-family: Arial;
     padding: 40px 0;
     text-align: center;
-    /* border-radius: 5px;
-    margin: 20px; */
-    width: 100%; /* Set the discover section to full page width */
-    overflow: hidden; /* Clear the float */
-    display: flex; /* Use Flexbox */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align items */
+    width: 100%; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
 
 }
 
-/* Styling the heading */
+
 #discover h2 {
-    color: #333; /* Darker text color for the heading */
+    color: #333; 
     font-size: 48px;
     margin-bottom: 10px;
 }
 
-/* Styling the paragraph */
+
 #discover p {
-    color: #666; /* Lighter text color for the paragraph */
-    text-align: center; /* Center-align the text */
-    font-size: 20px; /* Set the font size */
-    margin: 20px auto; /* Vertical margins of 20px, horizontal auto for centering */
-    max-width: 1000px; /* Maximum width of the paragraph */
+    color: #666; 
+    text-align: center;
+    font-size: 20px; 
+    margin: 20px auto; 
+    max-width: 1000px; 
 }
 
 #discover .video-container {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 40px; /* Added space below the button */
+    margin-bottom: 40px; 
 }
 
 #discover .watch-story-btn {
     display: inline-block;
-    background-color: transparent; /* Keeps the background transparent */
-    color: #004687; /* Navy blue text color */
-    border: 2px solid #004687; /* Navy blue border */
-    padding: 15px 30px; /* Increased padding for a larger button */
+    background-color: transparent; 
+    color: #004687; 
+    border: 2px solid #004687; 
+    padding: 15px 30px; 
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-    font-size: 20px; /* Increased font size */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    font-size: 20px; 
 }
 
 #discover .watch-story-btn:hover {
     background-color: #004687;
-    color: white; /* White text color on hover */
-    text-decoration: underline; /* Underline text on hover */
+    color: white; 
+    text-decoration: underline; 
 }
 
-/* Styling the buttons */
+
 #discover button {
     width: 100%; 
-    padding: 50px; /* Adjust padding as needed */
-    margin: 0; /* Remove margin to extend to the edges */
-    background-color: #004687; /* Example color */
+    padding: 50px; 
+    margin: 0; 
+    background-color: #004687; 
     color: white;
-    border: 2px solid #004687; /* Border of the same color */
+    border: 2px solid #004687; 
     font-size: 24px;
-    display: inline-block; /* Ensures buttons are in a line */
-    box-sizing: border-box; /* Includes padding and border in the width */
-    border-radius: 0; /* Hard corners */
-    flex-grow: 1; /* Allow buttons to grow and fill the container */
-    /* Other button styles remain the same */
+    display: inline-block; 
+    box-sizing: border-box; 
+    border-radius: 0; 
+    flex-grow: 1; 
+    
     margin: 0; 
     
 }
-/* Button hover effect */
+
 #discover div.buttons-container {
-    width: 100%; /* Full width */
+    width: 100%; 
     display: flex;
-    justify-content: stretch; /* Use Flexbox for buttons */
+    justify-content: stretch; 
     margin: 0;
 }
 
@@ -185,49 +180,49 @@ main {
 }
 
 #discover button:after {
-    /* Arrow style */
-    content: '>'; /* Default arrow pointing right */
+    
+    content: '>'; 
     font-size: 24px;
-    transition: transform 0.3s ease; /* Smooth transition for transform */
-    display: inline-block; /* Smooth transition for transform */
+    transition: transform 0.3s ease; 
+    display: inline-block; 
 }
 
 #discover button.active:after {
-    transform: rotate(90deg); /* Rotates arrow for active state */
+    transform: rotate(90deg); 
 }
 
 #discover button.active {
-    background-color: #003366; /* Darker color for active state */
+    background-color: #003366; 
 }
 
 #options div {
     text-align: center;
     padding: 20px;
-    border: 1px solid #ddd; /* Optional border */
+    border: 1px solid #ddd; 
     margin-top: 10px;
 }
 
 .profiles-container {
-    display: flex; /* Enables Flexbox */
-    justify-content: center; /* Horizontally center the items */
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
 }
 
 .profile {
     margin: 20px;
     text-align: center;
-    /* The rest of your .profile styles */
+    
 }
-/* profile styles */
+
 .profile {
     text-align: center;
     margin: 20px;
 }
 
 .profile-pic {
-    width: 150px; /* Adjust as needed */
-    height: 150px; /* Adjust as needed */
-    border-radius: 50%; /* Circular image */
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
     margin-bottom: 10px;
 }
 
@@ -245,22 +240,22 @@ main {
 .profile-bio {
     font-size: 14px;
     color: #333;
-    max-width: 400px; /* Set a maximum width for the bio */
-    margin: 0 auto; /* Center the text block */
-    text-align: left; /* Optional: Align text to the left */
+    max-width: 400px; 
+    margin: 0 auto; 
+    text-align: left; 
 }
 
 
-/* Company Sections */
+
 
 .company-section {
-    width: calc(350px * 3 + 30px * 2); /* For three boxes per row with 20px gap */
+    width: calc(350px * 3 + 30px * 2); 
     padding-top: 50px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 30px;
-    margin: auto; /* Centers the section */
+    margin: auto; 
 }
 
 .company-box {
@@ -270,47 +265,47 @@ main {
     border: 1px solid #ddd;
 }
 .image-container {
-    overflow: hidden; /* Prevents the image from overflowing */
-    height: auto; /* Set to desired height */
-    display: flex; /* Keeps the image centered */
+    overflow: hidden; 
+    height: auto; 
+    display: flex; 
     justify-content: center;
     align-items: center;
 }
 
 .company-box:hover .company-image {
-    transform: scale(1.1); /* Slightly enlarges the image */
-    transition: transform 0.3s ease; /* Smooth transition effect */
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
 }
 
 
 .company-image {
-    width: 100%; /* Ensures the image takes up the entire width */
-    height: auto; /* Maintains the aspect ratio of the image */
-    display: block; /* Removes any default inline spacing */
+    width: 100%; 
+    height: auto; 
+    display: block; 
     margin: 0;
 }
 
 .company-box:hover .company-image {
-    transform: scale(1.1); /* Slightly enlarges the image */
-    transition: transform 0.3s ease; /* Smooth transition effect */
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
 }
 
 
 .company-title {
-    font-size: 20px; /* Adjust as needed */
-    margin-bottom: 10px; /* Spacing between title and image */
-    color: #333; /* Adjust color as needed */
+    font-size: 20px; 
+    margin-bottom: 10px; 
+    color: #333; 
 }
 
 .company-title-link {
-    text-decoration: none; /* Removes underline */
-    font-size: 20px; /* Adjust as needed */
-    margin-bottom: 10px; /* Spacing between title and image */
+    text-decoration: none; 
+    font-size: 20px; 
+    margin-bottom: 10px; 
     color: #333; 
 }
 
 .company-box:hover .company-title-link {
-    color: #004687; /* Changes color to blue on hover */
+    color: #004687; 
 }
 
 
@@ -321,17 +316,17 @@ main {
 }
 
 .learn-more-btn {
-    display: inline; /* Change to inline for link-like appearance */
+    display: inline; 
     font-size: 16px;
-    background-color: transparent; /* No background */
-    color: #004687; /* Example color, adjust as needed */
-    padding: 20px; /* Remove padding */
-    text-decoration: none; /* Remove default underline */
-    border: none; /* Remove border */
+    background-color: transparent; 
+    color: #004687; 
+    padding: 20px; 
+    text-decoration: none; 
+    border: none; 
 }
 
 .learn-more-btn:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }
 
 
@@ -359,23 +354,23 @@ main {
 }
 
 .navy-blue-box h2 {
-    font-size: 10px; /* Adjust size as needed */
+    font-size: 10px; 
     margin-bottom: 30px;
 }
 
 .navy-blue-box h3 {
-    font-size: 32px; /* Adjust size as needed */
+    font-size: 32px; 
     margin-bottom: 20px;
 }
 
 .navy-blue-box p {
-    font-size: 18px; /* Adjust size as needed */
+    font-size: 18px; 
 }
 
 
 
 
-/* Our Program Section */
+
 .our-program-section {
     margin-top: 50px;
     background-color: #f5f5f5;
@@ -393,15 +388,15 @@ main {
 
 
 .internship-section {
-    position: relative; /* Needed for arrow positioning */
+    position: relative; 
     background-color: #f5f5f5;
     padding: 50px;
     overflow: hidden;
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Centers items horizontally */
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
-    gap: 30px; /* Spacing between boxes */
-    padding: 50px; /* Background color */
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    padding: 50px; 
     
 }
 
@@ -434,33 +429,33 @@ main {
 
 .internship-section .program-box {
     flex: 0 0 300px;
-    background-color: white; /* White background for each box */
-    border: 1px solid #ddd; /* Border for the boxes */
-    width: calc(33% - 40px); /* Adjusted width for each box */
-    text-align: center; /* Aligns text to the center */
-    padding: 20px; /* Padding inside each box */
+    background-color: white; 
+    border: 1px solid #ddd; 
+    width: calc(33% - 40px); 
+    text-align: center; 
+    padding: 20px; 
 }
 
 .internship-section .program-box h3 {
-    font-size: 28px; /* Font size for the title */
-    color: #004687; /* Color of the title */
-    margin-bottom: 15px; /* Space below the title */
+    font-size: 28px; 
+    color: #004687; 
+    margin-bottom: 15px; 
 }
 
 .internship-section .program-box p {
-    font-size: 15px; /* Font size for the description */
-    margin-bottom: 20px; /* Space below the description */
+    font-size: 15px; 
+    margin-bottom: 20px; 
 }
 
 .internship-section .program-box a {
-    font-size: 10px; /* Font size for the description */
-    margin-bottom: 20px; /* Space below the description */
+    font-size: 10px; 
+    margin-bottom: 20px; 
 }
 
 
 
 
-/* Add your existing styles for .internship-section and .program-box */
+
 
 
 
@@ -497,7 +492,7 @@ main {
     margin-bottom: 20px;
 }
 
-/* Buttons */
+
 button {
     background-color: #008cba;
     color: white;
@@ -518,18 +513,18 @@ button:hover {
     color: white;
 }
 
-/* Footer */
+
 footer {
     background-color: #232323;
     color: white;
     text-align: center;
     padding: 20px 0;
-    clear: both; /* Ensures footer is at the bottom of all content */
+    clear: both; 
 }
 
 footer nav ul {
     justify-content: center;
-    padding: 0; /* Removes default padding */
+    padding: 0; 
 }
 
 footer nav ul li a {
@@ -550,87 +545,87 @@ footer nav ul li a:hover {
 
 
 
-/* ... Existing CSS ... */
 
-/* Responsive Styles */
+
+
 @media only screen and (max-width: 1400px) {
     body {
-        font-size: 16px; /* Smaller font size for mobile */
+        font-size: 16px; 
     }
 
     header {
-        padding: 0.5em 1em; /* Smaller padding for header */
-        flex-direction: column; /* Stack elements vertically */
+        padding: 0.5em 1em; 
+        flex-direction: column; 
         text-align: center;
     }
 
     .logo {
-        height: 30px; /* Smaller logo for mobile */
+        height: 30px; 
     }
 
     nav ul {
-        margin-top: 10px; /* Additional margin for the stacked nav */
-        flex-direction: column; /* Stack the menu items vertically */
+        margin-top: 10px; 
+        flex-direction: column; 
         align-items: center;
     }
 
     nav ul li {
-        margin: 5px 0; /* Adjust margin for stacked items */
+        margin: 5px 0; 
     }
 
     nav ul li a {
-        padding: 5px 20px; /* Larger padding for easier tapping */
+        padding: 5px 20px; 
     }
 
     .main-header {
-        height: 60vh; /* Adjust header height for mobile */
-        background-attachment: scroll; /* Change background attachment for better performance */
+        height: 60vh; 
+        background-attachment: scroll; 
     }
 
     .overlay {
-        font-size: 16px; /* Smaller font size for the overlay text */
-        padding-top: 300px; /* Adjust padding */
-        position: static; /* Reset position */
-        transform: none; /* Reset transform */
+        font-size: 16px; 
+        padding-top: 300px; 
+        position: static; 
+        transform: none; 
     }
 
-    /* Adjust main content padding */
+    
     main {
-        margin-top: -60vh; /* Adjust to match the new header size */
-        padding-top: 60vh; /* Adjust to match the new header size */
+        margin-top: -60vh; 
+        padding-top: 60vh; 
     }
     
-    /* Additional responsive adjustments can be added here */
+    
 }
 
 
 @media only screen and (max-width: 1400px) {
     .company-section {
-        width: auto; /* Adjust width for smaller screens */
-        padding: 20px; /* Adjust padding */
+        width: auto; 
+        padding: 20px; 
     }
 
     .company-box {
-        width: 100%; /* Full width on small screens */
-        margin-bottom: 20px; /* Add some space between boxes */
+        width: 100%; 
+        margin-bottom: 20px; 
     }
 
 
     .company-title, .company-title-link {
-        font-size: 18px; /* Slightly smaller font size */
+        font-size: 18px; 
     }
 
     .company-description {
-        font-size: 14px; /* Adjust font size for readability */
-        padding: 10px; /* Adjust padding */
+        font-size: 14px; 
+        padding: 10px; 
     }
 
     .learn-more-btn {
-        padding: 10px; /* Adjust button padding */
-        font-size: 14px; /* Adjust font size for buttons */
+        padding: 10px; 
+        font-size: 14px; 
     }
 
-    /* Optional: Adjust hover effects if they don't work well on touch devices */
+    
     .company-box:hover .company-image,
     .company-box:hover .company-title-link {
         transform: none;

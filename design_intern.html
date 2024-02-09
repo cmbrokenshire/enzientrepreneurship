@@ -100,7 +100,7 @@
                     <span class="file-upload-subtext">(.pdf, .doc, .docx, .txt)</span>
                     <label for="resume" class="file-upload-button">UPLOAD RESUME</label>
                     <input type="file" id="resume" name="resume" class="file-input" accept=".pdf, .doc, .docx, .txt" required>
-                    <div id="resumeFileName" class="file-upload-info"></div> <!-- Placeholder for file name -->
+                    <div id="resumeFileName" class="file-upload-info"></div> 
                 </div>
                 
                 <div class="file-upload">
@@ -142,7 +142,7 @@
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
                                 <option value="I choose to not disclose">I choose to not disclose</option>
-                                <!-- Add additional options here -->
+                                
                             </select>
                         </div>
                         <div class="identification-field">
@@ -157,7 +157,7 @@
                                 <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
                                 <option value="White">White</option>
                                 <option value="I choose not to disclose">I choose not to disclose</option>
-                                <!-- Add additional options here -->
+                                
                             </select>
                         </div>
                         <div class="identification-field">
@@ -173,7 +173,7 @@
                                 <option value="Queer">Queer</option>
                                 <option value="Not Listed">Not Listed</option>
                                 <option value="I choose not to disclose">I choose not to disclose</option>
-                                <!-- Add additional options here -->
+                                
                             </select>
                         </div>
                         <div class="identification-field">
@@ -183,7 +183,7 @@
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>
                                 <option value="I choose not to disclose">I choose not to disclose</option>
-                                <!-- Add additional options here -->
+                                
                             </select>
                         </div>
                         <div class="identification-field">
@@ -198,18 +198,18 @@
                                 <option value="Not Listed">Not Listed</option>
                                 <option value="I choose not to disclose">I choose not to disclose</option>
 
-                                <!-- Add additional options here -->
+                                
                             </select>
                         </div>
                     </div>
                     
-                    <!-- Repeat for other questions -->
+                    
                 </div>
                 <input type="hidden" name="formType" value="UX/UI Design Internship">
                 <button type="submit" class="submit-button">SUBMIT APPLICATION</button>
                 <div id="loadingMessage" style="display: none;">Submitting, please wait...</div>
                 <div id="formResponse" style="color: green;"></div>
-                <!-- Example for a Machine Learning Internship form -->
+                
                 
 
                 
@@ -235,44 +235,26 @@
     
         
         </script>
-    <!-- <script>
-        document.getElementById('applicationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var formData = new FormData(this);
     
-            fetch('/submit-application', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('formResponse').textContent = data;
-                document.querySelector('.submit-button').style.display = 'none';
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-    </script> -->
     
     <script>
         let selectedFiles = [];
         
         document.getElementById('additionalFiles').addEventListener('change', function() {
-            // Add the newly selected files to the existing array
+            
             Array.from(this.files).forEach(file => {
                 if (selectedFiles.length < 5 && !selectedFiles.some(f => f.name === file.name)) {
                     selectedFiles.push(file);
                 }
             });
     
-            // Check if the total number exceeds the limit
+            
             if (selectedFiles.length > 5) {
                 alert('You can only upload up to 5 documents.');
-                selectedFiles = selectedFiles.slice(0, 5); // Keep only the first 5 files
+                selectedFiles = selectedFiles.slice(0, 5); 
             }
     
-            // Update the display with the file names
+            
             document.getElementById('additionalFilesNames').textContent =
                 selectedFiles.length > 0 ? 'Selected files: ' + selectedFiles.map(file => file.name).join(', ') : '';
         });
@@ -284,18 +266,18 @@
             var loadingMessage = document.getElementById('loadingMessage');
             var formResponse = document.getElementById('formResponse');
     
-            // Hide the submit button and show the loading message
+            
             submitButton.style.display = 'none';
             loadingMessage.style.display = 'block';
     
             var formData = new FormData(this);
             
-            // Append each file from selectedFiles to formData
+            
             selectedFiles.forEach(file => {
                 formData.append('additionalFiles[]', file);
             });
     
-            // Send formData to the server
+            
             fetch('http://127.0.0.1:5000/submit-application', {
                 method: 'POST',
                 body: formData
@@ -304,7 +286,7 @@
             .then(data => {
                 formResponse.textContent = data.message;
                 formResponse.style.color = 'green';
-                // Keep the submit button hidden
+               
                 submitButton.style.display = 'none';
                 loadingMessage.style.display = 'none';
             })
@@ -312,7 +294,7 @@
                 console.error('Error:', error);
                 formResponse.textContent = "Error submitting application: " + error;
                 formResponse.style.color = 'red';
-                // Keep the submit button hidden in case of error
+                
                 submitButton.style.display = 'none';
                 loadingMessage.style.display = 'none';
             });

@@ -1,15 +1,15 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box; /* Use border-box box model */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
 }
 
 html {
-    width: 100vw; /* Full viewport width */
-    min-width: 100vw; /* Minimum viewport width */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    width: 100vw; 
+    min-width: 100vw; 
+    overflow-x: hidden; 
 }
 
 body {
@@ -19,10 +19,10 @@ body {
     color: #333;
     font-size: 22px;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
 }
 
-/* Header */
+
 header {
     background-color: #004687;
     height: 20vw;
@@ -31,20 +31,20 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 1em 2em;
-    position: relative; /* Fixed position */
-    top: 0; /* Stick to the top */
-    left: 0; /* Align to the left */
-    width: 100vw; /* Full viewport width */
-    z-index: 1000; /* High z-index to ensure it's on top */
+    position: relative; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    z-index: 1000; 
     transition: top 0.3s ease-in-out;
     
 }
 
 .logo {
-    height: 65px; /* Adjust the logo size */
+    height: 65px; 
 }
 
-/* Navigation Menu */
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -62,13 +62,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #aaaaaa; /* Lighter color for hover state */
+    color: #aaaaaa; 
 }
 
-/* Main Header Image */
-/* Main Header Image - Ensure it stretches fully and is fixed during scroll */
+
+
 .main-header {
-    position: relative; /* ensure positioning context for z-index */
+    position: relative; 
     z-index: 1001; 
     background: url('intern_image.png') no-repeat center center;
     font-family: "Poppins";
@@ -77,9 +77,9 @@ nav ul li a:hover {
     font-size: 48px;
     position: relative;
     width: 85vw;
-    height: 40vh; /* lower z-index */
-    left: 42%; /* move to 50% from the left of the viewport */
-    transform: translateX(-50%); /* shift back 50% of its own width */
+    height: 40vh; 
+    left: 42%; 
+    transform: translateX(-50%); 
     margin-left: auto;
     margin-right: auto;
     top: -200px; 
@@ -90,57 +90,57 @@ nav ul li a:hover {
 .overlay {
     position: absolute;
     
-    bottom: 0; /* Align to the bottom edge */
-    left: 0; /* Align to the left edge */
-    width: 100%; /* Adjust width as necessary */
-    padding: 20px; /* Add some padding */
-    z-index: 2; /* Above the background image but below the header */
-    text-align: left; /* Align text to the left */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    padding: 20px; 
+    z-index: 2; 
+    text-align: left; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
 
 .main-header h1, .main-header p {
-    color: white; /* White text for visibility */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for better readability */
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
 }
 
-/* Main Content */
+
 main {
     
-    margin-top: -100vh; /* Pull main content up to sit below the header */
-    padding-top: 100vh; /* Add padding to push the content down, equal to the header's height */
+    margin-top: -100vh; 
+    padding-top: 100vh; 
 }
 
 #programs {
     position: relative;
-    background: #fff; /* or any color you prefer */
+    background: #fff; 
     width: 80vw;
-    margin-top: -300px; /* Adjust this value as needed to overlap */
-    z-index: 1002; /* higher z-index to overlap the main header */
-    left: 50%; /* move to 50% from the left of the viewport */
-    transform: translateX(-50%); /* shift back 50% of its own width */
-    /* additional styling for the section */
+    margin-top: -300px; 
+    z-index: 1002; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    
 }
 
 #programs .scroll-to-application {
-    position: fixed; /* Fixed position relative to the viewport */
-    top: 5%; /* Position from the top */
-    right: 10%; /* Use percentage for responsive positioning */
+    position: fixed; 
+    top: 5%; 
+    right: 10%; 
     width: 150px;
     display: inline-block;
-    background-color: transparent; /* Keeps the background transparent */
-    color: #004687; /* Navy blue text color */
-    border: 2px solid #004687; /* Navy blue border */
-    padding: 10px 20px; /* Increased padding for a larger button */
+    background-color: transparent; 
+    color: #004687; 
+    border: 2px solid #004687; 
+    padding: 10px 20px; 
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, color 0.3s ease; 
     font-size: 16px;
     cursor: pointer;
-    text-align: center; /* Center text inside the button */
-    z-index: 1003; /* Ensure it is above other elements */
+    text-align: center; 
+    z-index: 1003; 
 }
 
 
@@ -149,8 +149,8 @@ main {
 }
 
 #programs .scroll-to-application:hover {
-    background-color: #004687; /* Navy blue background on hover */
-    color: white; /* White text color on hover */
+    background-color: #004687; 
+    color: white; 
 }
 
 
@@ -160,52 +160,52 @@ main {
 }
 
 #programs .column {
-    width: 70%; /* One third of the container */
-    padding:3.38rem; /* Optional: padding for spacing inside the column */
-    box-sizing: border-box; /* Include padding and border in the element's width */
-    /* Additional styling as needed */
+    width: 70%; 
+    padding:3.38rem; 
+    box-sizing: border-box; 
+    
 }
 
 #programs h2 {
     font-size: 36px;
-    /* Additional styling as needed */
+    
 }
 
 #programs h3 {
     font-size: 30px;
     margin-top: 40px;
-    /* Additional styling as needed */
+    
 }
 
 #programs p {
     margin-top: 40px;
     font-size: 16px;
-    /* Additional styling as needed */
+    
 }
 
 #programs ul {
     font-size: 16px;
-    margin-top: 20px; /* Space between h3 and the list */
-    padding-left: 20px; /* Indentation for bullet points */
-    /* Additional styling as needed */
+    margin-top: 20px; 
+    padding-left: 20px; 
+    
 }
 
 #programs li {
     font-size: 16px;
-    margin-bottom: 10px; /* Space between list items */
-    /* Additional styling as needed */
+    margin-bottom: 10px; 
+    
 }
 
 #application-section {
     background-color: #fff;
     padding: 50px;
     width: 80vw;
-    position: relative; /* Added for consistency with #programs */
-    left: 50%; /* Center align the section */
-    transform: translateX(-50%); /* Shift back to align perfectly with #programs */
-    margin-top: 2px; /* Adjust as needed for spacing */
-    z-index: 1001; /* Ensure it's below #programs if they overlap */
-    box-sizing: border-box; /* Include padding in the width calculation */
+    position: relative; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    margin-top: 2px; 
+    z-index: 1001; 
+    box-sizing: border-box; 
 }
 
 #application-section .form-grid {
@@ -216,7 +216,7 @@ main {
 }
 
 #application-section .form-field {
-    width: calc(50% - 15px); /* Adjust width for 2x2 grid */
+    width: calc(50% - 15px); 
     margin-bottom: 20px;
 }
 
@@ -238,7 +238,7 @@ main {
 
 #application-section .button-row {
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: column; 
     gap: 10px;
 }
 
@@ -251,7 +251,7 @@ main {
     cursor: pointer;
     font-weight: normal;
     text-transform: normal;
-    display: block; /* Full width */
+    display: block; 
     text-align: center;
 }
 
@@ -261,43 +261,43 @@ main {
 }
 
 .file-upload {
-    margin-top: 20px; /* Space between file upload sections */
-    text-align: left; /* Align to the left */
+    margin-top: 20px; 
+    text-align: left; 
 }
 
 .file-upload-text {
-    display: block; /* Make text a block-level element */
+    display: block; 
     font-weight: normal;
-    margin-bottom: 5px; /* Space between text and button */
+    margin-bottom: 5px; 
     font-size: 16px;
 }
 .file-upload-subtext {
-    display: block; /* Make text a block-level element */
+    display: block; 
     font-weight: normal;
-    margin-bottom: 5px; /* Space between text and button */
+    margin-bottom: 5px; 
     font-size: 12px;
 }
 
 .file-upload-button {
     width: 300px;
     display: inline-block;
-    background-color: transparent; /* Keeps the background transparent */
-    color: #004687; /* Navy blue text color */
-    border: 2px solid #004687; /* Navy blue border */
-    padding: 10px 20px; /* Increased padding for a larger button */
+    background-color: transparent; 
+    color: #004687; 
+    border: 2px solid #004687; 
+    padding: 10px 20px; 
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, color 0.3s ease; 
     font-size: 16px;
     cursor: pointer;
 }
 
 .file-upload-button:hover {
-    background-color: #004687; /* Navy blue background on hover */
-    color: white; /* White text color on hover */
+    background-color: #004687; 
+    color: white; 
 }
 
 .file-input {
-    display: none; /* Hide the default file input */
+    display: none; 
 }
 
 .submit-button {
@@ -309,7 +309,7 @@ main {
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
-    display: block; /* Full width */
+    display: block; 
     margin-top: 30px;
 }
 
@@ -318,8 +318,8 @@ main {
 }
 
 .identification-section {
-    margin-top: 80px; /* Space between sections */
-    text-align: left; /* Align to the left */
+    margin-top: 80px; 
+    text-align: left; 
 }
 
 .identification-text {
@@ -333,8 +333,8 @@ main {
     text-align: left;
     font-size: 16px;
     font-weight: normal;
-    width: 66.66%; /* Two-thirds of the container width */
-    /* Centers the block within the container */
+    width: 66.66%; 
+    
     padding-bottom: 20px;
 }
 
@@ -357,7 +357,7 @@ main {
 }
 
 .identification-field {
-    width: calc(50% - 10px); /* Adjust width for 2x3 grid */
+    width: calc(50% - 10px); 
     margin-bottom: 20px;
 }
 
@@ -372,30 +372,30 @@ main {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    background-color: #fff; /* White background */
-    color: #333; /* Dark text color */
-    -webkit-appearance: none; /* Removes default styling of select in WebKit browsers */
-    -moz-appearance: none; /* Removes default styling of select in Mozilla browsers */
-    appearance: none; /* Removes default styling */
-    position: relative; /* For custom arrow positioning */
+    background-color: #fff; 
+    color: #333; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    position: relative; 
     font-size: 16px;
     cursor: pointer;
 }
 
 .identification-select:hover {
-    border-color: #004687; /* Navy blue border on hover */
+    border-color: #004687; 
 }
 
 .identification-select::after {
-    /* Custom arrow styling */
+    
     content: '';
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
     border: 5px solid transparent;
-    border-top-color: #004687; /* Navy blue arrow */
-    pointer-events: none; /* Prevents the arrow from being clickable */
+    border-top-color: #004687; 
+    pointer-events: none; 
 }
 
 

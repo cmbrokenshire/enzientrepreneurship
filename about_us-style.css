@@ -1,17 +1,17 @@
 
-/* Basic Reset */
+
 *,
 *:before,
 *:after {
-    box-sizing: border-box; /* Use border-box box model */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
 }
 
 html {
-    width: 100vw; /* Full viewport width */
-    min-width: 100vw; /* Minimum viewport width */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    width: 100vw; 
+    min-width: 100vw; 
+    overflow-x: hidden; 
 }
 
 body {
@@ -21,30 +21,30 @@ body {
     font-size: 22px;
     background-color: #fff;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
 }
 
-/* Header */
+
 header {
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
-    position: fixed; /* Fixed position */
-    top: 0; /* Stick to the top */
-    left: 0; /* Align to the left */
-    width: 100vw; /* Full viewport width */
-    z-index: 1000; /* High z-index to ensure it's on top */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    z-index: 1000; 
     transition: top 0.3s ease-in-out;
     
 }
 
 .logo {
-    height: 100px; /* Adjust the logo size */
+    height: 100px; 
 }
 
-/* Navigation Menu */
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -64,21 +64,21 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #aaaaaa; /* Lighter color for hover state */
+    color: #aaaaaa; 
 }
 
-/* Main Header Image */
-/* Main Header Image - Ensure it stretches fully and is fixed during scroll */
+
+
 .main-header {
     background: url('student_p_image.png') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* Fix the background image during scroll */
+    background-attachment: fixed; 
     font-size: 48px;
     position: relative;
-    width: 100vw; /* Viewport width */
-    height: 45vh; /* Full viewport height */
-    margin-left: calc(-50vw + 50%); /* Center align the background */
-    z-index: 1; /* Ensure it's below the fixed header */
+    width: 100vw; 
+    height: 45vh; 
+    margin-left: calc(-50vw + 50%); 
+    z-index: 1; 
     padding-left: 20px;
     
 }
@@ -86,15 +86,15 @@ nav ul li a:hover {
     position: absolute;
     font-family: "Poppins";
     font-size: 42px;
-    bottom: 0; /* Align to the bottom edge */
-    padding-left: 60px; /* Align to the left edge */
-    width: 100%; /* Adjust width as necessary */
-    padding: 20px; /* Add some padding */
-    z-index: 2; /* Above the background image but below the header */
-    text-align: left; /* Align text to the left */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    bottom: 0; 
+    padding-left: 60px; 
+    width: 100%; 
+    padding: 20px; 
+    z-index: 2; 
+    text-align: left; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
 * {

@@ -7,10 +7,10 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
-from flask_cors import CORS  # Import CORS
+from flask_cors import CORS  
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS
+CORS(app)  
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
 if not os.path.exists(UPLOAD_FOLDER):
@@ -18,7 +18,7 @@ if not os.path.exists(UPLOAD_FOLDER):
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def send_email(firstName, lastName, userEmail, phone, filepaths, voluntary_info):
-    email_password = os.environ.get('ykhw bllf hbyz ooym')  # Get password from environment variable
+    email_password = os.environ.get('ykhw bllf hbyz ooym')  
     message = MIMEMultipart()
     message["Subject"] = "New Application Submission"
     message["From"] = "chris@enzimotors.com"
