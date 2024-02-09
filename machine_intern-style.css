@@ -14,11 +14,10 @@ html {
 
 body {
     background-color: #f0f0f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins";
     padding: 0;
     color: #333;
     font-size: 22px;
-    
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
@@ -72,6 +71,7 @@ nav ul li a:hover {
     position: relative; /* ensure positioning context for z-index */
     z-index: 1001; 
     background: url('intern_image.png') no-repeat center center;
+    font-family: "Poppins";
     background-size: cover;
     background-attachment: fixed;
     font-size: 48px;

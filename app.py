@@ -46,12 +46,14 @@ def send_email(firstName, lastName, userEmail, phone, filepaths, voluntary_info)
 
 @app.route('/submit-application', methods=['POST'])
 def submit_application():
+    
     print(request.form)
     try:
         firstName = request.form['firstName']
         lastName = request.form['lastName']
         email = request.form['email']
         phone = request.form['phone']
+        form_type = request.form.get('formType', 'Unknown Internship Form')
 
         gender_identity = request.form.get('genderIdentity', 'Not provided')
         transgender_experience = request.form.get('transgenderExperience', 'Not provided')
@@ -81,6 +83,7 @@ def submit_application():
         Sexual Orientation: {sexual_orientation}
         Disability Status: {disability_status}
         Veteran Status: {veteran_status}
+        Internship: {form_type}
         """
 
 

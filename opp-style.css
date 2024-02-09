@@ -55,7 +55,9 @@ nav ul li {
 
 nav ul li a {
     color: white;
+    font-family: "Poppins";
     text-decoration: none;
+    font-size: 21px;
     padding: 5px 10px;
     transition: color 0.3s;
 }
@@ -80,7 +82,8 @@ nav ul li a:hover {
 }
 .overlay {
     position: absolute;
-    font-size: 28px;
+    font-family: "Poppins";
+    font-size: 36px;
     bottom: 0; /* Align to the bottom edge */
     padding-left: 60px; /* Align to the left edge */
     width: 100%; /* Adjust width as necessary */
@@ -107,6 +110,7 @@ main {
 
 /* Programs section */
 #programs {
+    
     text-align: center;
     padding: 2em 0; /* Top and bottom padding */
     padding-bottom: 0;
@@ -121,6 +125,8 @@ main {
 }
 
 .opportunity-box {
+    font-family: "Poppins";
+    font-weight: 500;
     background-color: transparent; /* Light grey background */
     font-size: 14px;
     padding: 1em;
@@ -175,6 +181,7 @@ main {
 
 /* Category Content Section */
 .category-content {
+    
     display: flex; /* Change to flex for vertical stacking */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center align the items */
@@ -212,6 +219,7 @@ main {
 }
 
 .content-box h3 {
+    font-family: "Poppins";
     color: #333; /* Darker text for headers */
     margin-bottom: 10px;
 }

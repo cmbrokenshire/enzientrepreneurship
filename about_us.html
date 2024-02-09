@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Our Team Section</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="about_us-style.css" />
+  </head>
+
+
+  <body>
+    <header>
+        <img src="Enzi-logo-400px.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="https://enzimotors.com/" target="_blank">Enzimotors</a></li>
+                <li><a href="opp.html" target="_blank">Opportunities</a></li>
+                <li><a href="about_us.html" target="_blank">About Us</a></li>
+                <li><a href="https://enzimotors.com/faqs/" target="_blank">FAQs</a></li>
+                <li><a href="https://enzimotors.com/contact-us/" target="_blank">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <header class="main-header">
+            <div class="overlay">
+                <h1>About Us.</h1>
+            </div>           
+        </header>
+        <section>
+            <div class="row">
+                <h2>Our Mission</h2>
+            </div>
+            <div class="row">
+                <p>Our mission at Enzi Entrepreneurship Program is give students the one of a kind experience of looking and taking part in the inner workings of succesful start. What makes a company successful? As an intern at Enzi you will witness how talent, hardwork, and determination are channeled into results. By taking part in this program you will be taking part in actual start-up experience, you will be part of a team that is struggling to make a difference in the world. Interns will be build software that could touch millions, present information that could change the trajectory of the company, and talk the clients interested in accelerating our growth. You can make a difference in the company that is already changing lives. We want to give you the opportunity to do good. The best opportunity we could possibly give. </p>
+            </div>
+
+            <div class="row">
+                <h2>Our Team</h2>
+            </div>
+            <div class="row">
+                <!-- Column 1-->
+                <div class="column">
+                <div class="card">
+                    <div class="img-container">
+                    <img src="Bill_Schafer.jpeg" />
+                    </div>
+                    <h3>Bill Schafer</h3>
+                    <p>Chief Executive Officer</p>
+                    <div class="icons">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    </div>
+                </div>
+                </div>
+                <div class="column">
+                <div class="card">
+                    <div class="img-container">
+                    <img src="my_profile.jpeg" />
+                    </div>
+                    <h3>Christopher Brokenshire</h3>
+                    <p>Program Director</p>
+                    <div class="icons">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    </div>
+                </div>
+                </div>
+                <!-- Column 2-->
+                
+                <!-- Column 3-->
+                <div class="column">
+                <div class="card">
+                    <div class="img-container">
+                    <img src="profile-img-3.png" />
+                    </div>
+                    <h3>Alexander Rolinski</h3>
+                    <p>Program Advisor</p>
+                    <div class="icons">
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let lastScrollTop = 0;
+        const delta = 5; // Minimum scroll amount to trigger the hide/show
+        const headerHeight = document.querySelector("header").offsetHeight; // Height of the header
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            const header = document.querySelector("header");
+
+            // Gradually change the header's opacity based on scroll position
+            if (currentScroll > 0) {
+                let opacity = 1 - (currentScroll / header.offsetHeight);
+                header.style.opacity = opacity >= 0 ? opacity : 0;
+            } else {
+                header.style.opacity = 1;
+            }
+        }, false);
+    </script>
+  </body>
+</html>
