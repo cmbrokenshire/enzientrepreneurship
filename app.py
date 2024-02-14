@@ -17,6 +17,10 @@ CORS(app)
 def index():
     return send_from_directory(os.getcwd(), 'index.html')
 
+@app.route('/opp')
+def opp():
+    return send_from_directory(os.getcwd(), 'opp.html')
+
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
 if not os.path.exists(UPLOAD_FOLDER):
