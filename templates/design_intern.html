@@ -159,7 +159,7 @@
 
             if (selectedFiles.length > 5) {
                 alert('You can only upload up to 5 documents.');
-                selectedFiles = selectedFiles.slice(0, 5);
+                selectedFiles = selectedFiles.slice(0, 5); 
             }
 
             document.getElementById('additionalFilesNames').textContent =
@@ -178,12 +178,10 @@
 
             var formData = new FormData(this);
 
-            // Append additional files to formData if any
             selectedFiles.forEach(file => {
                 formData.append('additionalFiles[]', file);
             });
 
-            // Submit the form data
             fetch('/submit-application', {
                 method: 'POST',
                 body: formData
@@ -193,20 +191,19 @@
                 formResponse.textContent = data.message;
                 formResponse.style.color = 'green';
 
-                // Hide the loading message and submit button on successful submission
-                loadingMessage.style.display = 'none';
                 submitButton.style.display = 'none';
+                loadingMessage.style.display = 'none';
             })
             .catch(error => {
                 console.error('Error:', error);
                 formResponse.textContent = "Error submitting application: " + error;
                 formResponse.style.color = 'red';
 
-                // Hide the loading message and submit button in case of an error
-                loadingMessage.style.display = 'none';
                 submitButton.style.display = 'none';
+                loadingMessage.style.display = 'none';
             });
         });
+
 
     </script>
     
