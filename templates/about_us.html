@@ -21,7 +21,7 @@
 
   <body>
     <header>
-        <img src="Enzi-logo-400px.png" alt="Logo" class="logo">
+        <img src="{{ url_for('static', filename='images/example.jpg') }}Enzi-logo-400px.png" alt="Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="/" target="_blank">Home</a></li>
@@ -58,7 +58,7 @@
                 <div class="column">
                 <div class="card">
                     <div class="img-container">
-                    <img src="Bill_Schafer.jpeg" />
+                    <img src="{{ url_for('static', filename='images/Bill_Schafer.jpeg') }}B" />
                     </div>
                     <h3>Bill Schafer</h3>
                     <p>Chief Executive Officer</p>
@@ -78,7 +78,7 @@
                 <div class="column">
                 <div class="card">
                     <div class="img-container">
-                    <img src="my_profile.jpeg" />
+                    <img src="{{ url_for('static', filename='images/my_profile.jpeg') }}" />
                     </div>
                     <h3>Christopher Brokenshire</h3>
                     <p>Program Director</p>
