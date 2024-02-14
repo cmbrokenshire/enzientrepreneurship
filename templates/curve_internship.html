@@ -72,7 +72,7 @@
             
         </section>
         <section id="application-section">
-            <form id="applicationForm" action="http://127.0.0.1:5000/submit-application" method="post" enctype="multipart/form-data">
+            <form id="applicationForm" action="/submit-application" method="post" enctype="multipart/form-data">
                 <div class="form-grid">
                     <div class="form-field">
                         <label for="firstName">First Name *</label>
@@ -187,7 +187,7 @@
             });
     
             
-            fetch('http://127.0.0.1:5000/submit-application', {
+            fetch('/submit-application', {
                 method: 'POST',
                 body: formData
             })
