@@ -1,5 +1,6 @@
 
 from flask import Flask, request, jsonify
+from flask import Flask, send_from_directory
 import os
 from werkzeug.utils import secure_filename
 import smtplib
@@ -14,7 +15,7 @@ CORS(app)
 
 @app.route('/')
 def index():
-    return 'Welcome to my Flask application!'
+    return send_from_directory(os.getcwd(), 'index.html')
 
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
