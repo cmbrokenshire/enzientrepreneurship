@@ -398,3 +398,132 @@ main {
     pointer-events: none; 
 }
 
+
+
+footer {
+    background-color: #232323;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    clear: both; 
+}
+
+footer nav ul {
+    justify-content: center;
+    padding: 0; 
+}
+
+footer nav ul li a {
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+footer nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1400px) {
+    body {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    header {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Adjust height for mobile */
+        align-items: center;
+    }
+
+    .logo {
+        height: 50px; /* Smaller logo for mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for stacked items */
+    }
+
+    .main-header {
+        width: 100vw; /* Full width for mobile */
+        height: 30vh; /* Adjusted height for mobile */
+        left: 0;
+        transform: translateX(0); /* Reset transform for mobile */
+    }
+
+    .main-header h1, .main-header p {
+        font-size: 36px; /* Adjust font size for mobile */
+    }
+
+    main {
+        margin-top: -75vh; /* Adjust margin top based on new header height */
+    }
+
+    #programs {
+        width: 95vw; /* Increase width for smaller screens */
+        margin-top: -250px; /* Adjust margin */
+    }
+
+    #programs .column {
+        width: 100%; /* Full width for columns */
+        padding: 2rem; /* Adjust padding */
+    }
+
+    #application-section {
+        width: 95vw; /* Use more of the viewport width */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    #application-section .form-grid {
+        gap: 5px; /* Reduce gap */
+    }
+
+    #application-section .form-field {
+        width: 100%; /* Full width for each field */
+    }
+
+    #application-section .button-row {
+        flex-direction: column; /* Keep buttons in a column */
+    }
+
+    #application-section .upload-button,
+    #application-section button[type="submit"] {
+        padding: 15px; /* Increase padding for easier tapping */
+    }
+
+    .file-upload-button, .submit-button {
+        width: 100%; /* Full width for buttons */
+    }
+    footer {
+        padding: 20px; /* Adjust padding */
+        text-align: center; /* Center align text */
+    }
+
+    .overlay {
+        font-size: 24px; /* Adjust font size */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .identification-section {
+        padding: 15px; /* Adjust section padding */
+    }
+    body {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5em; /* Scale down heading sizes */
+    }
+
+    p {
+        line-height: 1.5; /* Adjust line height for readability */
+    }
+}

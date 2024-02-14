@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
     padding: 0;
     color: #333;
     font-size: 22px;
@@ -632,3 +632,5 @@ footer nav ul li a:hover {
         color: inherit;
     }
 }
+
+
