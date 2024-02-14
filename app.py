@@ -17,6 +17,30 @@ CORS(app)
 def index():
     return render_template('index.html')
 
+@app.route('/about_us')
+def about_us():
+    return render_template('about_us.html')
+
+@app.route('/curve_internship')
+def curve_internship():
+    return render_template('curve_internship.html')
+
+@app.route('/design_intern')
+def design_intern():
+    return render_template('design_intern.html')
+
+@app.route('/machine_intern')
+def machine_intern():
+    return render_template('machine_intern.html')
+
+@app.route('/software_intern')
+def software_intern():
+    return render_template('software_intern.html')
+
+@app.route('/data_internship')
+def data_internship():
+    return render_template('data_internship.html')
+
 @app.route('/opp')
 def opp():
     return render_template('opp.html')
