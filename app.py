@@ -21,6 +21,10 @@ def index():
 def opp():
     return send_from_directory(os.getcwd(), 'opp.html')
 
+@app.route('/style.css')
+def style():
+    return send_from_directory(os.getcwd(), 'style.css')
+
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
 if not os.path.exists(UPLOAD_FOLDER):
