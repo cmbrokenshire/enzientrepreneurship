@@ -149,6 +149,7 @@
     
     <script>
         let selectedFiles = [];
+        
 
         document.getElementById('additionalFiles').addEventListener('change', function() {
             Array.from(this.files).forEach(file => {
@@ -163,7 +164,7 @@
             }
 
             document.getElementById('additionalFilesNames').textContent =
-                selectedFiles.length > 0 ? 'Selected files: ' + selectedFiles.map(file => file.name).join(', ') : '';
+                selectedFiles.length > 0 ? 'Selected files: ' + selectedFiles.map(file => file.name).join(', ') : 'No files selected';
         });
 
         document.getElementById('applicationForm').addEventListener('submit', function(e) {
@@ -174,7 +175,7 @@
             var formResponse = document.getElementById('formResponse');
 
             submitButton.style.display = 'none';
-            loadingMessage.style.display = 'block';
+            loadingMessage.style.display = 'block'; // Ensure this is visible
 
             var formData = new FormData(this);
 
@@ -188,21 +189,18 @@
             })
             .then(response => response.json())
             .then(data => {
-                formResponse.textContent = data.message;
+                formResponse.textContent = data.message; // Check if your server is sending back a 'message' field
                 formResponse.style.color = 'green';
-
-                submitButton.style.display = 'none';
-                loadingMessage.style.display = 'none';
+                loadingMessage.style.display = 'none'; // Hide loading message
             })
             .catch(error => {
                 console.error('Error:', error);
                 formResponse.textContent = "Error submitting application: " + error;
                 formResponse.style.color = 'red';
-
-                submitButton.style.display = 'none';
-                loadingMessage.style.display = 'none';
+                loadingMessage.style.display = 'none'; // Hide loading message
             });
         });
+
 
 
     </script>

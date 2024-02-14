@@ -105,11 +105,17 @@ def submit_application():
         resume.save(resumePath)
         filepaths.append(resumePath)
 
+        # additionalFiles = request.files.getlist('additionalFiles[]')
+        # for file in additionalFiles:
+        #     filePath = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(file.filename))
+        #     file.save(filePath)
+        #     filepaths.append(filePath)
         additionalFiles = request.files.getlist('additionalFiles[]')
         for file in additionalFiles:
-            filePath = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(file.filename))
-            file.save(filePath)
-            filepaths.append(filePath)
+            if file.filename:  # Check if filename is not empty
+                filePath = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(file.filename))
+                file.save(filePath)
+                filepaths.append(filePath)
          
         voluntary_info = f"""
         Gender Identity: {gender_identity}
