@@ -66,7 +66,7 @@ nav ul li a:hover {
 
 }
 .main-header {
-    background: url('combo_3.png') no-repeat center center;
+    background: url('/static/images/combo_3.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed; 
     font-size: 48px;
@@ -335,7 +335,7 @@ main {
 
 .image-background-section {
     padding: 100px;
-    background-image: url('nairobi_2.jpeg');
+    background-image: url('/static/images/nairobi_2.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;

@@ -70,7 +70,7 @@ nav ul li a:hover {
 
 
 .main-header {
-    background: url('student_p_image.png') no-repeat center center;
+    background: url('/static/images/student_p_image.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed; 
     font-size: 48px;

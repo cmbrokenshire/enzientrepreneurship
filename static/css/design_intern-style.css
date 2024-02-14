@@ -71,7 +71,7 @@ nav ul li a:hover {
 .main-header {
     position: relative; 
     z-index: 1001; 
-    background: url('design_photo.jpeg') no-repeat center center;
+    background: url('/static/images/design_photo.jpeg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     font-size: 48px;

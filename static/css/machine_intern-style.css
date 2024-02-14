@@ -70,7 +70,7 @@ nav ul li a:hover {
 .main-header {
     position: relative; 
     z-index: 1001; 
-    background: url('intern_image.png') no-repeat center center;
+    background: url('/static/images/intern_image.png') no-repeat center center;
     font-family: "Poppins";
     background-size: cover;
     background-attachment: fixed;
