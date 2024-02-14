@@ -12,6 +12,11 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  
 
+@app.route('/')
+def index():
+    return 'Welcome to my Flask application!'
+
+
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
