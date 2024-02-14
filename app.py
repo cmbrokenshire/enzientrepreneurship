@@ -19,11 +19,8 @@ def index():
 
 @app.route('/opp')
 def opp():
-    return send_from_directory(os.getcwd(), 'opp.html')
+    return render_template('opp.html')
 
-@app.route('/style.css')
-def style():
-    return send_from_directory(os.getcwd(), 'style.css')
 
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
