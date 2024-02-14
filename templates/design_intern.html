@@ -105,7 +105,7 @@
                 </div>
                 
                 <div class="file-upload">
-                    <span class="file-upload-text">Additional Files*</span>
+                    <span class="file-upload-text">Additional Files</span>
                     <span class="file-upload-subtext">Upload up to 5 supplemental documents (.pdf, .doc, .docx, .txt, .jpeg, .gif, .png), max 30MB each</span>
                     <label for="additionalFiles" class="file-upload-button">UPLOAD DOCUMENTS</label>
                     <input type="file" id="additionalFiles" name="additionalFiles[]" class="file-input" accept=".pdf, .doc, .docx, .txt, .jpeg, .gif, .png" multiple>
@@ -150,58 +150,65 @@
     <script>
         let selectedFiles = [];
         
-
         document.getElementById('additionalFiles').addEventListener('change', function() {
+            
             Array.from(this.files).forEach(file => {
                 if (selectedFiles.length < 5 && !selectedFiles.some(f => f.name === file.name)) {
                     selectedFiles.push(file);
                 }
             });
-
+    
+            
             if (selectedFiles.length > 5) {
                 alert('You can only upload up to 5 documents.');
                 selectedFiles = selectedFiles.slice(0, 5); 
             }
-
+    
+            
             document.getElementById('additionalFilesNames').textContent =
-                selectedFiles.length > 0 ? 'Selected files: ' + selectedFiles.map(file => file.name).join(', ') : 'No files selected';
+                selectedFiles.length > 0 ? 'Selected files: ' + selectedFiles.map(file => file.name).join(', ') : '';
         });
-
+    
         document.getElementById('applicationForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
+    
             var submitButton = document.querySelector('.submit-button');
             var loadingMessage = document.getElementById('loadingMessage');
             var formResponse = document.getElementById('formResponse');
-
+    
+            
             submitButton.style.display = 'none';
-            loadingMessage.style.display = 'block'; // Ensure this is visible
-
+            loadingMessage.style.display = 'block';
+    
             var formData = new FormData(this);
-
+            
+            
             selectedFiles.forEach(file => {
                 formData.append('additionalFiles[]', file);
             });
-
+    
+            
             fetch('/submit-application', {
                 method: 'POST',
                 body: formData
             })
             .then(response => response.json())
             .then(data => {
-                formResponse.textContent = data.message; // Check if your server is sending back a 'message' field
+                formResponse.textContent = data.message;
                 formResponse.style.color = 'green';
-                loadingMessage.style.display = 'none'; // Hide loading message
+                
+                submitButton.style.display = 'none';
+                loadingMessage.style.display = 'none';
             })
             .catch(error => {
                 console.error('Error:', error);
                 formResponse.textContent = "Error submitting application: " + error;
                 formResponse.style.color = 'red';
-                loadingMessage.style.display = 'none'; // Hide loading message
+                
+                submitButton.style.display = 'none';
+                loadingMessage.style.display = 'none';
             });
         });
-
-
 
     </script>
     
