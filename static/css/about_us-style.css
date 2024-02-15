@@ -229,7 +229,7 @@ footer nav ul li a:hover {
     border-radius: 5px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 800px) {
     body {
         font-size: 16px; 
     }
@@ -280,7 +280,7 @@ footer nav ul li a:hover {
 }
 
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 800px) {
     .company-section {
         width: auto; 
         padding: 20px; 
