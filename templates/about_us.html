@@ -21,7 +21,7 @@
 
   <body>
     <header>
-        <img src="{{ url_for('static', filename='images/example.jpg') }}Enzi-logo-400px.png" alt="Logo" class="logo">
+        <img src="{{ url_for('static', filename='images/Enzi-logo-400px.png') }}" alt="Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="/" target="_blank">Home</a></li>
@@ -98,9 +98,26 @@
                     </div>
                 </div>
                 </div>
-                
-                
-                
+                <div class="column">
+                <div class="card">
+                    <div class="img-container">
+                    <img src="{{ url_for('static', filename='images/headshot.jpg') }}" />
+                    </div>
+                    <h3>Jacob Newman</h3>
+                    <p>Program Director</p>
+                    <div class="icons">
+                    <a href="https://www.linkedin.com/in/jacobnewman01/">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jacobnewman01/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:jacob.newman2024@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    </div>
+                </div>
+                </div>
             </div>
         </section>
     </main>
@@ -119,20 +136,19 @@
     
 
     <script>
-        let lastScrollTop = 0;
-        const delta = 5; 
-        const headerHeight = document.querySelector("header").offsetHeight; 
-
         window.addEventListener("scroll", function() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             const header = document.querySelector("header");
 
-       
             if (currentScroll > 0) {
                 let opacity = 1 - (currentScroll / header.offsetHeight);
                 header.style.opacity = opacity >= 0 ? opacity : 0;
+
+                // Set pointer events based on the opacity
+                header.style.pointerEvents = opacity > 0 ? 'auto' : 'none';
             } else {
                 header.style.opacity = 1;
+                header.style.pointerEvents = 'auto';
             }
         }, false);
     </script>
