@@ -567,6 +567,7 @@ footer nav ul li a:hover {
         margin-top: 10px; 
         flex-direction: column; 
         align-items: center;
+        margin-bottom: 20px;
     }
 
     nav ul li {
@@ -578,7 +579,7 @@ footer nav ul li a:hover {
     }
 
     .main-header {
-        height: 60vh; 
+        height: 70vh; 
         background-attachment: scroll; 
     }
 
