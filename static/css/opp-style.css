@@ -246,9 +246,6 @@ main {
 
 
 
-
-
-
 footer {
     background-color: #232323;
     color: white;
@@ -282,53 +279,60 @@ footer nav ul li a:hover {
 
 @media only screen and (max-width: 800px) {
     body {
-        font-size: 18px; 
+        font-size: 16px; 
     }
 
     header {
+        padding: 0.5em 1em; 
         flex-direction: column; 
-        padding: 0.5em; 
+        text-align: center;
+        margin-bottom: 20px; /* Separation between header and main content */
     }
 
     .logo {
-        height: 60px; 
+        height: 30px; 
+        margin-bottom: 10px; /* Added space between logo and nav */
     }
 
     nav ul {
+        margin-top: 10px; /* Space below navigation bar */
         flex-direction: column; 
-        align-items: center; 
-        padding: 0; 
+        align-items: center;
     }
 
     nav ul li {
-        margin: 10px 0; 
+        margin: 5px 0; 
     }
 
     nav ul li a {
-        padding: 8px 15px; 
+        padding: 5px 20px; 
     }
 
     .main-header {
-        height: 60vh; 
-        background-attachment: scroll; 
+        height: 65vh; /* Keeping as is */
+        background-attachment: scroll; /* Keeping as is */
+        padding-top: 40px; /* Originally added padding */
+        text-align: center; /* Ensure text is centered */
     }
 
+    /* Overlay Adjustments */
     .overlay {
-        font-size: 10px; 
-        padding-top: 335px; 
-        position: static; 
-        transform: none; 
-        white-space: normal; 
-    }
-
-    .main-header h1, .main-header p {
-        font-size: 24px; 
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
+        font-size: 16px; /* Keeping your font size */
+        padding-top: 300px; /* Keeping your padding */
+        position: static; /* Keeping as is */
+        transform: none; /* Keeping as is */
+        width: 70%; /* Keeping your width */
+        margin: auto; /* Center the overlay */
+        left: 0; /* Align left edge */
+        right: 0; /* Align right edge */
+        text-align: center; /* Ensure text is centered */
+        overflow: hidden; /* Hide overflow */
+        white-space: normal; /* Allow text wrapping */
     }
 
     main {
-        margin-top: -30vh; 
-        padding-top: 30vh; 
+        margin-top: -60vh; 
+        padding-top: 60vh; 
     }
 
     
