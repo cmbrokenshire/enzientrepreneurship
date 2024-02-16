@@ -230,53 +230,59 @@ footer nav ul li a:hover {
 }
 
 @media only screen and (max-width: 800px) {
-    body {
-        font-size: 16px; 
-    }
+  body {
+      font-size: 16px; 
+  }
 
-    header {
-        padding: 0.5em 1em; 
-        flex-direction: column; 
-        text-align: center;
-    }
+  header {
+      padding: 0.5em 1em; 
+      flex-direction: column; 
+      text-align: center;
+  }
 
-    .logo {
-        height: 30px; 
-    }
+  .logo {
+      height: 30px; 
+      margin-bottom: 10px; /* Added to create space between logo and nav */
+  }
 
-    nav ul {
-        margin-top: 10px; 
-        flex-direction: column; 
-        align-items: center;
-    }
+  nav ul {
+      margin-top: 10px; /* Space below navigation bar */
+      flex-direction: column; 
+      align-items: center;
+  }
 
-    nav ul li {
-        margin: 5px 0; 
-    }
+  nav ul li {
+      margin: 5px 0; 
+  }
 
-    nav ul li a {
-        padding: 5px 20px; 
-    }
+  nav ul li a {
+      padding: 5px 20px; 
+  }
 
-    .main-header {
-        height: 60vh; 
-        background-attachment: scroll; 
-    }
+  .main-header {
+      height: 60vh;
+      background-attachment: scroll;
+      display: flex; /* Use flexbox for alignment */
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      padding-top: 0; /* Remove padding-top */
+  }
 
-    .overlay {
-        font-size: 16px; 
-        padding-top: 300px; 
-        position: static; 
-        transform: none; 
-    }
+  .overlay {
+      font-size: 16px; 
+      position: relative; /* Adjust position to relative */
+      transform: none;
+      width: 100%; /* Full width to center the text */
+      text-align: center; /* Center the text */
+      white-space: normal; /* Allow text to wrap */
+      overflow: hidden; /* Hide overflow */
+      margin-top: 70vw; /* Space from the main-header */
+  }
 
-    
-    main {
-        margin-top: -60vh; 
-        padding-top: 60vh; 
-    }
-    
-    
+  main {
+      margin-top: -60vh; 
+      padding-top: 60vh; 
+  }
 }
 
 
