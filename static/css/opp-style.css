@@ -309,22 +309,19 @@ footer nav ul li a:hover {
     }
 
     .main-header {
-        height: 65vh; /* Keeping as is */
+        height: 80vh; /* Keeping as is */
         background-attachment: scroll; /* Keeping as is */
-        padding-top: 40px; /* Originally added padding */
+        padding-top: 30vh; /* Originally added padding */
         text-align: center; /* Ensure text is centered */
     }
 
     /* Overlay Adjustments */
     .overlay {
         font-size: 16px; /* Keeping your font size */
-        padding-top: 300px; /* Keeping your padding */
+        padding-top: 35vw; /* Keeping your padding */
         position: static; /* Keeping as is */
         transform: none; /* Keeping as is */
-        width: 70%; /* Keeping your width */
-        margin: auto; /* Center the overlay */
-        left: 0; /* Align left edge */
-        right: 0; /* Align right edge */
+        width: 80%; /* Keeping your width */
         text-align: center; /* Ensure text is centered */
         overflow: hidden; /* Hide overflow */
         white-space: normal; /* Allow text wrapping */
