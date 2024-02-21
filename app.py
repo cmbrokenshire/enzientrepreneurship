@@ -18,6 +18,20 @@ def set_security_headers(response):
     response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
     response.headers['X-Content-Type-Options'] = 'nosniff'
     response.headers['Referrer-Policy'] = 'no-referrer'
+
+    #csp policy 
+
+    csp_policy = (
+    "default-src 'self'; "
+    "script-src 'self' 'unsafe-inline' https://code.jquery.com; "
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; " 
+    "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; "
+    "img-src 'self' data:; "
+    "connect-src 'self'; "
+    "object-src 'none';"
+    )
+    response.headers['Content-Security-Policy'] = csp_policy
+
     return response
 
 
