@@ -23,13 +23,15 @@ def set_security_headers(response):
 
     csp_policy = (
     "default-src 'self'; "
-    "script-src 'self' 'unsafe-inline' https://code.jquery.com; "
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; " 
-    "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; "
-    "img-src 'self' data:; "
-    "connect-src 'self'; "
-    "object-src 'none';"
+    "script-src 'self' https://code.jquery.com; "  # Allow scripts from your domain and jQuery
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; "  # Allow styles from your domain, Google Fonts, and Font Awesome
+    "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; "  # Allow fonts from Google and Font Awesome
+    "img-src 'self' data:; "  # Allow images from your domain and data URIs
+    "connect-src 'self'; "  # If you have AJAX requests to your own domain
+    "object-src 'none'; "
+    "base-uri 'self';"  # Restrict base URI to your own domain
     )
+
     response.headers['Content-Security-Policy'] = csp_policy
 
     return response
